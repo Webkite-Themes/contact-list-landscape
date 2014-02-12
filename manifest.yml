@@ -1,2 +1,8 @@
+stylesheets:
+  - light.css
+
 templates:
   - results.handlebars.js
+
+partials:
+  - paginator.handlebars.js
