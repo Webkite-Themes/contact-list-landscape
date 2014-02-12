@@ -3,5 +3,9 @@ body{
   background: #ccc;
   } 
 #webkite-results{
-  
+  }
+.webkite-page-input::-webkit-outer-spin-button,
+.webkite-page-input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
   }

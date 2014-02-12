@@ -3,7 +3,7 @@
   <a href="#" data-page="{{prevPage}}" class="previous-result-page {{#if (equals page 1)}}disabled{{/if}}" {{#if (equals page 1)}}disabled=""{{/if}}>&lt;</a>
   <p>
     page 
-    <input class="webkite-page-input" type="number" placeholder="{{page}}"/> 
+    <input class="webkite-page-input" type="number" value="{{page}}" min="1" max="{{pages}}"/> 
     <em>of</em> {{pages}}
   </p>
   <a href="#" data-page="{{nextPage}}" class="next-result-page {{#if (equals page pages)}}disabled{{/if}}" {{#if (equals page pages)}}disabled=""{{/if}}>&gt;</a>
