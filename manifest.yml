@@ -1,3 +1,6 @@
+images:
+  - branding.svg
+
 stylesheets:
   - light.css
 

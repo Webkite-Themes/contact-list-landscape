@@ -1,27 +1,50 @@
 {{log this}}
 
-{{>paginator pagination}}
+<header class="webkite-results-header">
+  <div class="webkite-title-area"><h1>Contact List Landscape Card</h1></div>
+  <div class="wk-pagination-area">{{>paginator pagination}}</div>
+</header>
 
-<section class="wk-result">
 {{#each this.items}}
-	<div class="forty">
+<section class="wk-result">
+	<div class="webkite-block forty">
+	  <img src="http://placehold.it/400x400"/>
 	  <h2>
-	    {{#with (facet name="Name")}}{{displayValue}}{{/with}}
+	    {{#facet name="Name"}}{{displayValue}}{{/facet}}
 	   </h2>
-	</div><!--forty-->
-	<div class="sixty">
-	<ul>
-	  {{#each facets}}
-	  {{#unless (equals name "Name")}}
-		<li>{{name}}</li>
-		{{#if (equals name "Number")}}
-		  <li><a href="tel:{{displayValue}}">{{displayValue}}</a></li>
-		  {{else}}
-      <li>{{displayValue}}</li>
-		{{/if}}
-		{{/unless}}
-    {{/each}}
-	</ul>
-	</div><!--sixty-->
-{{/each}}
+	</div><!--webkite-block-forty-->
+	<div class="webkite-block sixty">
+  	<ul>
+  	  <li>{{#facet name="home address"}}
+  	    <b>{{capitalize name}}</b>
+        <a href="http://maps.google.com/?q={{displayValue}}">{{displayValue}}</a>
+      </li>{{/facet}}
+      <li>{{#facet name="Email"}}
+  	    <b>{{name}}</b>
+        <a href="mailto:{{displayValue}}">{{displayValue}}</a>
+      </li>{{/facet}}
+      <li>{{#facet name="Number"}}
+  	    <b>{{name}}</b>
+        <a href="tel:{{displayValue}}">{{displayValue}}</a>
+      </li>{{/facet}}
+  	</ul>
+  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler more-button" data-target=".{{this.id}}-toggler">More</a>
+  <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler webkite-hide less-button" data-target=".{{this.id}}-toggler">Less</a>
+  	<div id="{{this.id}}" class="webkite-item-details">
+    	<ul>
+      {{#each facets}}
+      {{#unless (equals name "Name" "Email" "home address" "Number")}}
+    	<li><b>{{name}}</b> <span>{{displayValue}}</span></li>
+    	{{/unless}}
+      {{/each}}
+    </ul>
+  	</div><!-- webkite-item-details -->
+	</div><!--webkite-block sixty-->
+  <footer class="wk-result-footer"></footer>
 </section>
+{{/each}}
+
+<footer class="webkite-results-footer">
+  <div class="webkite-branding-area"><a href="http://webkite.com">{{image "branding.svg" height="45" width="136"}}</a></div>
+  <div class="wk-pagination-area">{{>paginator pagination}}</div>
+</footer>
