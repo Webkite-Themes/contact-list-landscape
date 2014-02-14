@@ -1,0 +1,191 @@
+//@import 'webfonts';
+
+//COLOR PALETTE
+$lightBackground:rgba(255,255,255,.95);
+
+$mainDark: rgba(0,0,0,.9);
+$mainMed: rgba(0,0,0,.7);
+$mainLight: rgba(0,0,0,.6);
+$mainLighter: rgba(0,0,0,.1);
+$mainLightest: rgba(0,0,0,.05);
+
+$linkColor: #1b9cd2;
+
+//SIZES
+$mainGutter: 1.25rem;
+
+//MIXINS
+@mixin roundedUp($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+  }
+@mixin boxedUp{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+@mixin breakThat{
+  &:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;margin: 0;padding: 0; white-space: pre-line;
+    }
+  }
+  
+//@include web-font((Open Sans) 300,400,400i,700,700i);
+
+/****************************************** BEGIN STYLES */
+#webkite-results{
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(255,255,255,.1);
+  @include roundedUp(.625rem);
+  @include boxedUp;
+  max-width: 43.750rem;
+  margin: 0 auto;
+  padding: $mainGutter;
+  font-family:"Open Sans";
+  a{color:$linkColor;
+      text-decoration: none; 
+    &:hover{color: $linkColor/1.5;}
+    }
+  }
+  
+/* TYPOGRAPHY */
+h1, h2{
+  margin: 0;
+  }
+h1{
+  font: 300 2.25rem/1 "Open Sans";
+  color: $mainDark;
+  }
+h2{
+  font: 700 1.5rem/1 "Open Sans";
+  color: $mainMed;
+  }
+p, li{
+  color: $mainLight;
+  }
+
+/* NAVIGATIONALS */
+.webkite-results-header, .webkite-results-footer{
+  text-align: justify;
+  position: relative;
+  h1{text-align: left;}
+  @include breakThat;
+  .webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+    display: inline-block;
+    vertical-align:middle;
+    }
+  }
+.webkite-results-footer{
+  height: 2.813rem;
+  }
+
+/********************************************* PAGINATION */
+.webkite-results-paginator{
+  font-size: 1rem;
+  & a, & p{display: inline;}
+  & a{font-size: 1.2rem; line-height: 0;}
+  }
+/* page input */
+input.webkite-page-input{
+  @include roundedUp(.188rem);
+  border: 1px solid $mainLighter;
+  padding: $mainGutter/4;
+  max-width: 1.5rem; 
+  font-size: .9rem;
+  color: $mainLight;
+  }
+/* remove arrows */
+.webkite-page-input::-webkit-outer-spin-button,
+.webkite-page-input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+/********************************************** BLOCKS */
+.webkite-block{
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  @include boxedUp;
+  &:first-child{padding-right: $mainGutter;}
+  ul{
+    margin: 0;
+    -webkit-padding-start: 0;
+    li{
+      list-style-type: none;
+      text-align: justify;
+      padding-bottom: $mainGutter/2;
+      b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;}
+      a, span{@extend b; width:59%;}   
+      }  
+    }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: $mainGutter/2;
+    @include roundedUp(0.188rem);
+    }
+  }
+.webkite-block.sixty{
+  width: 59%;
+  }
+.webkite-block.forty{
+ width: 39%;
+  }
+  
+/************************************ LANDSCAPE RESULTS */  
+.wk-result{
+  padding-top: $mainGutter;
+  text-align: justify;
+  position: relative;
+  @include breakThat;
+  }
+#webkite-results a.more-button{
+  background: $linkColor;
+  color: white;
+  position: absolute; bottom: $mainGutter*2.15; right: 0;
+  padding: $mainGutter/4 $mainGutter/2;
+  @include roundedUp(.188rem);
+  }
+#webkite-results a.less-button{
+  @extend a.more-button;
+  background: $mainLight;
+  }
+.wk-result-footer{
+  clear: both;
+  display: block;
+  padding-top: $mainGutter;
+  border-bottom: 1px solid $mainLightest;
+  }
+  
+/************************************** ELEMENT QUERIES */
+#webkite-results.xs{
+  .webkite-block,.webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+    width: 100%;
+    padding-right: 0;
+    }
+  .webkite-block ul li{
+    b, a, span{width: 100%;}
+    }
+  .webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+    text-align: center;
+    }
+  .webkite-title-area, .webkite-branding-area{
+    padding-bottom: $mainGutter; 
+    }
+  .webkite-results-footer{
+    height: 2.813rem*2+$mainGutter;
+    }
+  }
+  
+#webkite-results.sm{
+  .webkite-block ul li{
+    b, a, span{width: 100%;}
+    }
+  }
