@@ -67,28 +67,60 @@ select.webkite-sort {
   border-radius: 0.188rem;
   -webkit-appearance: none;
   background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 1rem;
-  height: 2.063rem;
-  padding: 0.3125rem; }
+  font-weight: 700;
+  height: 2.125rem;
+  padding: 0.3125rem;
+  /* width: 4.063rem; */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: ''; }
+
+div.webkite-sort {
+  position: relative; }
+  div.webkite-sort:after {
+    content: "\25BE";
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    opacity: .5;
+    position: absolute;
+    right: 0.625rem;
+    top: 20%;
+    pointer-events: none; }
 
 /************************************************ FILTERS */
 .webkite-fliter-area {
-  width: 50%; }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  padding-left: 6.5rem;
+  margin-left: -6.5rem; }
 
 .webkite-fliter-area .label, .current-filters {
   display: inline-block; }
 
+.webkite-applied-filters {
+  position: relative; }
+
 .current-filters {
-  -webkit-border-radius: 0 0.188rem 0.188rem 0;
-  -moz-border-radius: 0 0.188rem 0.188rem 0;
-  -ms-border-radius: 0 0.188rem 0.188rem 0;
-  -o-border-radius: 0 0.188rem 0.188rem 0;
-  border-radius: 0 0.188rem 0.188rem 0;
+  -webkit-border-radius: 0.188rem;
+  -moz-border-radius: 0.188rem;
+  -ms-border-radius: 0.188rem;
+  -o-border-radius: 0.188rem;
+  border-radius: 0.188rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.3125rem;
-  margin-left: -5px; }
+  padding-left: 5rem;
+  width: 100%;
+  text-align: end; }
 
 .webkite-fliter-area .label {
   -webkit-border-radius: 0.188rem 0 0 0.188rem;
@@ -97,25 +129,38 @@ select.webkite-sort {
   -o-border-radius: 0.188rem 0 0 0.188rem;
   border-radius: 0.188rem 0 0 0.188rem;
   background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.3125rem; }
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  padding: 0.3125rem;
+  position: absolute;
+  z-index: 9;
+  left: 0; }
+
+.webkite-fliter-area .label b, .webkite-fliter-area .label .webkite-block ul li a, .webkite-block ul li .webkite-fliter-area .label a, .webkite-fliter-area .label .webkite-block ul li span, .webkite-block ul li .webkite-fliter-area .label span {
+  font-size: .8rem;
+  opacity: .5; }
 
 #webkite-results a.webkite-remove-filter {
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  float: left; }
   #webkite-results a.webkite-remove-filter:hover {
     text-decoration: line-through; }
 
 #webkite-results a.webkite-clear-filters {
   background: #1b9cd2;
   color: white;
-  font-size: small;
-  line-height: 0;
+  font-size: .5rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  vertical-align: text-top;
   padding: 0 0.3125rem 0.10417rem 0.3125rem;
-  -webkit-border-radius: 0.188rem;
-  -moz-border-radius: 0.188rem;
-  -ms-border-radius: 0.188rem;
-  -o-border-radius: 0.188rem;
-  border-radius: 0.188rem; }
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
 
 /********************************************* PAGINATION */
 .webkite-results-paginator {
@@ -157,7 +202,8 @@ input.webkite-page-input {
     padding-right: 1.25rem; }
   .webkite-block ul {
     margin: 0;
-    -webkit-padding-start: 0; }
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0; }
     .webkite-block ul li {
       list-style-type: none;
       text-align: justify;
@@ -231,7 +277,7 @@ input.webkite-page-input {
   width: 100%; }
 #webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
   text-align: center; }
-#webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area {
+#webkite-results.xs .webkite-branding-area {
   padding-bottom: 1.25rem; }
 #webkite-results.xs .webkite-results-footer {
   height: 6.876rem; }

@@ -92,43 +92,87 @@ select.webkite-sort{
   @include roundedUp(.188rem);
   -webkit-appearance: none;
   background: $lightestOpacity;
+  color: $lightOpacity;
   border: 1px solid $lighterOpacity;
   font-size: 1rem;
-  height: 2.063rem;
+  font-weight: 700;
+  height: 2.125rem;
   padding: $mainGutter/4;
+  /* width: 4.063rem; */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
   }
   
+div.webkite-sort{
+  position: relative;
+  &:after{
+    content: "\25BE";
+    color: $lightOpacity;
+    display:block;
+    opacity: .5;
+    position: absolute;
+    right: $mainGutter/2;
+    top:20%;
+    pointer-events: none;
+    }
+  }
+
+
 /************************************************ FILTERS */
 .webkite-fliter-area{
-  width: 50%;
+  @include boxedUp;
+  width: 100%;
+  position: relative;
+  padding-left: 6.5rem;
+  margin-left: -6.5rem;
   }
 .webkite-fliter-area .label, .current-filters{
   display: inline-block;
   }
+.webkite-applied-filters{
+  position: relative; 
+  }
 .current-filters{
-  @include roundedUp(0 .188rem .188rem 0);
+  @include roundedUp(.188rem);
+  @include boxedUp;
   background: white;
   border: 1px solid $lighterOpacity;
   padding: $mainGutter/4;
-  margin-left: -5px;
+  padding-left: 5rem;
+  width: 100%;
+  text-align: end;
   }
 .webkite-fliter-area .label{
   @include roundedUp(.188rem 0 0 .188rem);
   background: $lightestOpacity;
-  border: 1px solid $lighterOpacity;
+  border: 1px solid $lightestOpacity;
+  border-right: 1px solid $lighterOpacity;
+  color: $lightOpacity;
+  font-weight: 700;
   padding: $mainGutter/4;
+  position: absolute;
+  z-index: 9;
+  left: 0;
   } 
+.webkite-fliter-area .label b{
+  font-size: .8rem;
+  opacity: .5;
+  }
 #webkite-results a.webkite-remove-filter{
   font-size: 0.875rem;
   &:hover{text-decoration: line-through;}
+  float:left;
   }
 #webkite-results a.webkite-clear-filters{
   background: $linkColor;
   color: white;
-  font-size: small;
-  line-height: 0;
+  font-size: .5rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  vertical-align: text-top;
   padding: 0 $mainGutter/4 $mainGutter/12 $mainGutter/4;
-  @include roundedUp (.188rem);
+  @include roundedUp (50%);
   }
 
 /********************************************* PAGINATION */
@@ -163,6 +207,7 @@ input.webkite-page-input{
   ul{
     margin: 0;
     -webkit-padding-start: 0;
+    -moz-padding-start: 0;
     li{
       list-style-type: none;
       text-align: justify;
@@ -227,7 +272,7 @@ input.webkite-page-input{
   .webkite-title-area, .webkite-branding-area, .webkite-pagination-area{
     text-align: center;
     }
-  .webkite-title-area, .webkite-branding-area{
+  .webkite-branding-area{
     padding-bottom: $mainGutter; 
     }
   .webkite-results-footer{
