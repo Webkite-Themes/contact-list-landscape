@@ -1,15 +1,16 @@
-//@import 'webfonts';
+@import 'webfonts';
 
-//COLOR PALETTE
-$lightBackground:rgba(255,255,255,.95);
-
-$mainDark: rgba(0,0,0,.9);
-$mainMed: rgba(0,0,0,.7);
-$mainLight: rgba(0,0,0,.6);
-$mainLighter: rgba(0,0,0,.1);
-$mainLightest: rgba(0,0,0,.05);
+@import 'light-palette';
 
 $linkColor: #1b9cd2;
+$linkHover: #0073a7;
+
+//TOKEN COLORS
+$tokenFirst: $linkColor;
+$tokenSecond: #39a17c;
+$tokenThird: #a8936f;
+$tokenFourth: #e6af52;
+$tokenFifth: #6f7ca8;
 
 //SIZES
 $mainGutter: 1.25rem;
@@ -36,7 +37,7 @@ $mainGutter: 1.25rem;
     }
   }
   
-//@include web-font((Open Sans) 300,400,400i,700,700i);
+@include web-font((Open Sans) (300,400,400i,700,700i));
 
 /****************************************** BEGIN STYLES */
 #webkite-results{
@@ -50,7 +51,7 @@ $mainGutter: 1.25rem;
   font-family:"Open Sans";
   a{color:$linkColor;
       text-decoration: none; 
-    &:hover{color: $linkColor/1.5;}
+    &:hover{color: $linkHover;}
     }
   }
   
@@ -60,29 +61,74 @@ h1, h2{
   }
 h1{
   font: 300 2.25rem/1 "Open Sans";
-  color: $mainDark;
+  color: $highOpacity;
+  margin-bottom: $mainGutter;
   }
 h2{
   font: 700 1.5rem/1 "Open Sans";
-  color: $mainMed;
+  color: $medOpacity;
   }
 p, li{
-  color: $mainLight;
+  color: $lightOpacity;
   }
 
-/* NAVIGATIONALS */
+/******************************************** NAVIGATIONALS */
 .webkite-results-header, .webkite-results-footer{
   text-align: justify;
   position: relative;
   h1{text-align: left;}
   @include breakThat;
-  .webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+  .webkite-title-area, .webkite-sort-area, .webkite-fliter-area, .webkite-branding-area, .webkite-pagination-area{
     display: inline-block;
     vertical-align:middle;
     }
   }
 .webkite-results-footer{
   height: 2.813rem;
+  }
+  
+/************************************************* SORTS */
+select.webkite-sort{
+  @include roundedUp(.188rem);
+  -webkit-appearance: none;
+  background: $lightestOpacity;
+  border: 1px solid $lighterOpacity;
+  font-size: 1rem;
+  height: 2.063rem;
+  padding: $mainGutter/4;
+  }
+  
+/************************************************ FILTERS */
+.webkite-fliter-area{
+  width: 50%;
+  }
+.webkite-fliter-area .label, .current-filters{
+  display: inline-block;
+  }
+.current-filters{
+  @include roundedUp(0 .188rem .188rem 0);
+  background: white;
+  border: 1px solid $lighterOpacity;
+  padding: $mainGutter/4;
+  margin-left: -5px;
+  }
+.webkite-fliter-area .label{
+  @include roundedUp(.188rem 0 0 .188rem);
+  background: $lightestOpacity;
+  border: 1px solid $lighterOpacity;
+  padding: $mainGutter/4;
+  } 
+#webkite-results a.webkite-remove-filter{
+  font-size: 0.875rem;
+  &:hover{text-decoration: line-through;}
+  }
+#webkite-results a.webkite-clear-filters{
+  background: $linkColor;
+  color: white;
+  font-size: small;
+  line-height: 0;
+  padding: 0 $mainGutter/4 $mainGutter/12 $mainGutter/4;
+  @include roundedUp (.188rem);
   }
 
 /********************************************* PAGINATION */
@@ -94,11 +140,11 @@ p, li{
 /* page input */
 input.webkite-page-input{
   @include roundedUp(.188rem);
-  border: 1px solid $mainLighter;
+  border: 1px solid $lighterOpacity;
   padding: $mainGutter/4;
   max-width: 1.5rem; 
   font-size: .9rem;
-  color: $mainLight;
+  color: $lightOpacity;
   }
 /* remove arrows */
 .webkite-page-input::-webkit-outer-spin-button,
@@ -140,40 +186,45 @@ input.webkite-page-input{
   }
   
 /************************************ LANDSCAPE RESULTS */  
-.wk-result{
-  padding-top: $mainGutter;
+.webkite-result{
   text-align: justify;
   position: relative;
   @include breakThat;
   }
-#webkite-results a.more-button{
-  background: $linkColor;
-  color: white;
-  position: absolute; bottom: $mainGutter*2.15; right: 0;
-  padding: $mainGutter/4 $mainGutter/2;
-  @include roundedUp(.188rem);
-  }
-#webkite-results a.less-button{
-  @extend a.more-button;
-  background: $mainLight;
-  }
-.wk-result-footer{
+#webkite-results{
+  a.more-button{
+    background: $linkColor;
+    color: white;
+    display: inline-block;
+    padding: $mainGutter/4 $mainGutter/2;
+    margin-bottom: $mainGutter;
+    @include roundedUp(.188rem);
+    &:hover{background: $linkHover;}
+    }
+  a.less-button{
+    @extend a.more-button;
+    background: $lightOpacity;
+    &:hover{background: $lightOpacity*2;}
+    }
+}
+.webkite-result-footer{
   clear: both;
   display: block;
   padding-top: $mainGutter;
-  border-bottom: 1px solid $mainLightest;
+  border-bottom: 1px solid $lightestOpacity;
+  text-align: right;
   }
   
 /************************************** ELEMENT QUERIES */
 #webkite-results.xs{
-  .webkite-block,.webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+  .webkite-block,.webkite-title-area, .webkite-branding-area, .webkite-pagination-area{
     width: 100%;
     padding-right: 0;
     }
   .webkite-block ul li{
     b, a, span{width: 100%;}
     }
-  .webkite-title-area, .webkite-branding-area, .wk-pagination-area{
+  .webkite-title-area, .webkite-branding-area, .webkite-pagination-area{
     text-align: center;
     }
   .webkite-title-area, .webkite-branding-area{

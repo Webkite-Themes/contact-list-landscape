@@ -1,12 +1,13 @@
 {{log this}}
-
+<div class="webkite-title-area"><h1>Contact List Landscape Card</h1></div>
 <header class="webkite-results-header">
-  <div class="webkite-title-area"><h1>Contact List Landscape Card</h1></div>
-  <div class="wk-pagination-area">{{>paginator pagination}}</div>
+  <div class="webkite-sort-area">{{>sorts}}</div>
+  <div class="webkite-fliter-area">{{>filters this.filters}}</div>
+  <div class="webkite-pagination-area">{{>paginator pagination}}</div>
 </header>
 
 {{#each this.items}}
-<section class="wk-result">
+<section class="webkite-result">
 	<div class="webkite-block forty">
 	  <img src="http://placehold.it/400x400"/>
 	  <h2>
@@ -27,9 +28,12 @@
   	    <b>{{name}}</b>
         <a href="tel:{{displayValue}}">{{displayValue}}</a>
       </li>{{/facet}}
+      <li>{{#facet name="Office"}}
+        <b>{{name}}</b>
+        <a href="#" class="webkite-add-filter" data-facet="{{this.id}}" data-operator="like" data-value="{{this.text}}">{{displayValue}}</a>
+      </li>{{/facet}}
+      
   	</ul>
-  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler more-button" data-target=".{{this.id}}-toggler">More</a>
-  <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler webkite-hide less-button" data-target=".{{this.id}}-toggler">Less</a>
   	<div id="{{this.id}}" class="webkite-item-details">
     	<ul>
       {{#each facets}}
@@ -40,11 +44,14 @@
     </ul>
   	</div><!-- webkite-item-details -->
 	</div><!--webkite-block sixty-->
-  <footer class="wk-result-footer"></footer>
+  <footer class="webkite-result-footer">
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
+  <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler webkite-hide less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
+  </footer>
 </section>
 {{/each}}
 
 <footer class="webkite-results-footer">
   <div class="webkite-branding-area"><a href="http://webkite.com">{{image "branding.svg" height="45" width="136"}}</a></div>
-  <div class="wk-pagination-area">{{>paginator pagination}}</div>
+  <div class="webkite-pagination-area">{{>paginator pagination}}</div>
 </footer>

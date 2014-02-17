@@ -9,3 +9,5 @@ templates:
 
 partials:
   - paginator.handlebars.js
+  - filters.handlebars.js
+  - sorts.handlebars.js

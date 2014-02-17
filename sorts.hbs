@@ -1,0 +1,16 @@
+<div class="webkite-sort clearfix">
+  <!-- <div class="label" for="webkite-sort">sort by:</div> -->
+  <select class="webkite-sort">
+    <option value="" default selected="" role="label">sort by</option>
+    <option value="{{#if this.sort.currentSort}}{{this.sort.currentSort}}:{{this.sort.currentDirection}}{{else}}alphabetical:asc{{/if}}">
+    {{#if (equals this.sort.currentSort "alphabetical")}}
+      name
+    {{else}}
+      {{#unless this.sort.currentSort}}name{{/unless}}
+      {{this.sort.currentSort}}
+    {{/if}}
+    </option>
+    <option value="alphabetical{{#unless this.sort.currentSort}}:desc{{/unless}}">name</option>
+    <option value="Start Date">start date</option>
+  </select>
+</div>
