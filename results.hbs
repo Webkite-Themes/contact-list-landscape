@@ -1,9 +1,8 @@
-{{log this}}
+{{! log this}}
 <div class="webkite-title-area"><h1>Contact List Landscape Card</h1></div>
 <header class="webkite-results-header">
-  <div class="webkite-sort-area">{{>sorts}}</div>
+  <div class="webkite-sort-area">{{>sorts this.sort}}</div>
   <div class="webkite-fliter-area">{{>filters this.filters}}</div>
-  <div class="webkite-pagination-area">{{>paginator pagination}}</div>
 </header>
 
 {{#each this.items}}
@@ -29,6 +28,10 @@
         <a href="tel:{{displayValue}}">{{displayValue}}</a>
       </li>{{/facet}}
       <li>{{#facet name="Office"}}
+        <b>{{name}}</b>
+        <a href="#" class="webkite-add-filter" data-facet="{{this.id}}" data-operator="like" data-value="{{this.text}}">{{displayValue}}</a>
+      </li>{{/facet}}
+      <li>{{#facet name="Department"}}
         <b>{{name}}</b>
         <a href="#" class="webkite-add-filter" data-facet="{{this.id}}" data-operator="like" data-value="{{this.text}}">{{displayValue}}</a>
       </li>{{/facet}}
