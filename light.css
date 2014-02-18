@@ -51,7 +51,7 @@ p, li {
     margin: 0;
     padding: 0;
     white-space: pre-line; }
-  .webkite-results-header .webkite-title-area, .webkite-results-header .webkite-sort-area, .webkite-results-header .webkite-fliter-area, .webkite-results-header .webkite-branding-area, .webkite-results-header .webkite-pagination-area, .webkite-results-footer .webkite-title-area, .webkite-results-footer .webkite-sort-area, .webkite-results-footer .webkite-fliter-area, .webkite-results-footer .webkite-branding-area, .webkite-results-footer .webkite-pagination-area {
+  .webkite-results-header .webkite-title-area, .webkite-results-header .webkite-sort-area, .webkite-results-header .webkite-filter-area, .webkite-results-header .webkite-branding-area, .webkite-results-header .webkite-pagination-area, .webkite-results-footer .webkite-title-area, .webkite-results-footer .webkite-sort-area, .webkite-results-footer .webkite-filter-area, .webkite-results-footer .webkite-branding-area, .webkite-results-footer .webkite-pagination-area {
     display: inline-block;
     vertical-align: middle; }
 
@@ -69,9 +69,9 @@ select.webkite-sort {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  height: 2.125rem;
+  height: 1.938rem;
   padding: 0.3125rem;
   /* width: 4.063rem; */
   -moz-appearance: none;
@@ -79,7 +79,8 @@ select.webkite-sort {
   text-overflow: ''; }
 
 div.webkite-sort {
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   div.webkite-sort:after {
     content: "\25BE";
     color: rgba(0, 0, 0, 0.6);
@@ -91,7 +92,7 @@ div.webkite-sort {
     pointer-events: none; }
 
 /************************************************ FILTERS */
-.webkite-fliter-area {
+.webkite-filter-area {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -100,7 +101,7 @@ div.webkite-sort {
   padding-left: 6.5rem;
   margin-left: -6.5rem; }
 
-.webkite-fliter-area .label, .current-filters {
+.webkite-filter-area .label, .current-filters {
   display: inline-block; }
 
 .webkite-applied-filters {
@@ -117,12 +118,20 @@ div.webkite-sort {
   box-sizing: border-box;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1.938rem;
   padding: 0.3125rem;
-  padding-left: 5rem;
+  padding-left: 4.5rem;
   width: 100%;
-  text-align: end; }
+  text-align: end;
+  /* and & or */ }
+  .current-filters span {
+    color: rgba(0, 0, 0, 0.6);
+    float: left;
+    font-size: .875rem;
+    line-height: 1.2rem;
+    margin: 0 0.3125rem; }
 
-.webkite-fliter-area .label {
+.webkite-filter-area .label {
   -webkit-border-radius: 0.188rem 0 0 0.188rem;
   -moz-border-radius: 0.188rem 0 0 0.188rem;
   -ms-border-radius: 0.188rem 0 0 0.188rem;
@@ -132,28 +141,54 @@ div.webkite-sort {
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875rem;
   font-weight: 700;
   padding: 0.3125rem;
   position: absolute;
-  z-index: 9;
+  z-index: 2;
   left: 0; }
 
-.webkite-fliter-area .label b, .webkite-fliter-area .label .webkite-block ul li a, .webkite-block ul li .webkite-fliter-area .label a, .webkite-fliter-area .label .webkite-block ul li span, .webkite-block ul li .webkite-fliter-area .label span {
+.webkite-filter-area .label b, .webkite-filter-area .label .webkite-block ul li a, .webkite-block ul li .webkite-filter-area .label a, .webkite-filter-area .label .webkite-block ul li span, .webkite-block ul li .webkite-filter-area .label span {
   font-size: .8rem;
   opacity: .5; }
 
+/* tokens */
 #webkite-results a.webkite-remove-filter {
+  -webkit-border-radius: 0.188rem;
+  -moz-border-radius: 0.188rem;
+  -ms-border-radius: 0.188rem;
+  -o-border-radius: 0.188rem;
+  border-radius: 0.188rem;
+  color: white;
+  float: left;
   font-size: 0.875rem;
-  float: left; }
+  line-height: 1rem;
+  padding: 0.0625rem 0.3125rem; }
   #webkite-results a.webkite-remove-filter:hover {
     text-decoration: line-through; }
 
+.filter-group-0 a.webkite-remove-filter {
+  background: #1b9cd2; }
+
+.filter-group-1 a.webkite-remove-filter {
+  background: #39a17c; }
+
+.filter-group-2 a.webkite-remove-filter {
+  background: #a8936f; }
+
+.filter-group-3 a.webkite-remove-filter {
+  background: #e6af52; }
+
+.filter-group-4 a.webkite-remove-filter {
+  background: #6f7ca8; }
+
+/* clear everything */
 #webkite-results a.webkite-clear-filters {
   background: #1b9cd2;
   color: white;
   font-size: .5rem;
   font-weight: 700;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   vertical-align: text-top;
   padding: 0 0.3125rem 0.10417rem 0.3125rem;
   -webkit-border-radius: 50%;
@@ -273,6 +308,12 @@ input.webkite-page-input {
 #webkite-results.xs .webkite-block, #webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
   width: 100%;
   padding-right: 0; }
+#webkite-results.xs .webkite-filter-area, #webkite-results.xs .webkite-sort-area, #webkite-results.xs select.webkite-sort {
+  width: 100%; }
+#webkite-results.xs .webkite-filter-area {
+  margin-top: 1.25rem;
+  margin-left: 0;
+  padding-left: 0; }
 #webkite-results.xs .webkite-block ul li b, #webkite-results.xs .webkite-block ul li a, #webkite-results.xs .webkite-block ul li span, #webkite-results.xs .webkite-block ul li a, #webkite-results.xs .webkite-block ul li span {
   width: 100%; }
 #webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
@@ -282,5 +323,11 @@ input.webkite-page-input {
 #webkite-results.xs .webkite-results-footer {
   height: 6.876rem; }
 
+#webkite-results.sm .webkite-filter-area, #webkite-results.sm .webkite-sort-area, #webkite-results.sm select.webkite-sort {
+  width: 100%; }
+#webkite-results.sm .webkite-filter-area {
+  margin-top: 1.25rem;
+  margin-left: 0;
+  padding-left: 0; }
 #webkite-results.sm .webkite-block ul li b, #webkite-results.sm .webkite-block ul li a, #webkite-results.sm .webkite-block ul li span, #webkite-results.sm .webkite-block ul li a, #webkite-results.sm .webkite-block ul li span {
   width: 100%; }

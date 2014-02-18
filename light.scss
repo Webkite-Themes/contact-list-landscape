@@ -78,7 +78,7 @@ p, li{
   position: relative;
   h1{text-align: left;}
   @include breakThat;
-  .webkite-title-area, .webkite-sort-area, .webkite-fliter-area, .webkite-branding-area, .webkite-pagination-area{
+  .webkite-title-area, .webkite-sort-area, .webkite-filter-area, .webkite-branding-area, .webkite-pagination-area{
     display: inline-block;
     vertical-align:middle;
     }
@@ -94,9 +94,9 @@ select.webkite-sort{
   background: $lightestOpacity;
   color: $lightOpacity;
   border: 1px solid $lighterOpacity;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  height: 2.125rem;
+  height: 1.938rem;
   padding: $mainGutter/4;
   /* width: 4.063rem; */
   -moz-appearance: none;
@@ -106,6 +106,7 @@ select.webkite-sort{
   
 div.webkite-sort{
   position: relative;
+  z-index: 2;
   &:after{
     content: "\25BE";
     color: $lightOpacity;
@@ -120,14 +121,14 @@ div.webkite-sort{
 
 
 /************************************************ FILTERS */
-.webkite-fliter-area{
+.webkite-filter-area{
   @include boxedUp;
   width: 100%;
   position: relative;
   padding-left: 6.5rem;
   margin-left: -6.5rem;
   }
-.webkite-fliter-area .label, .current-filters{
+.webkite-filter-area .label, .current-filters{
   display: inline-block;
   }
 .webkite-applied-filters{
@@ -138,38 +139,70 @@ div.webkite-sort{
   @include boxedUp;
   background: white;
   border: 1px solid $lighterOpacity;
+  height: 1.938rem;
   padding: $mainGutter/4;
-  padding-left: 5rem;
+  padding-left: 4.5rem;
   width: 100%;
   text-align: end;
+  /* and & or */
+  span{
+    color: $lightOpacity;
+    float: left;
+    font-size: .875rem;
+    line-height: 1.2rem;
+    margin: 0 $mainGutter/4;
+    }
   }
-.webkite-fliter-area .label{
+.webkite-filter-area .label{
   @include roundedUp(.188rem 0 0 .188rem);
   background: $lightestOpacity;
   border: 1px solid $lightestOpacity;
   border-right: 1px solid $lighterOpacity;
   color: $lightOpacity;
+  font-size: 0.875rem;
   font-weight: 700;
   padding: $mainGutter/4;
   position: absolute;
-  z-index: 9;
+  z-index: 2;
   left: 0;
   } 
-.webkite-fliter-area .label b{
+.webkite-filter-area .label b{
   font-size: .8rem;
   opacity: .5;
   }
+/* tokens */
 #webkite-results a.webkite-remove-filter{
-  font-size: 0.875rem;
-  &:hover{text-decoration: line-through;}
+  @include roundedUp (.188rem);
+  color: white;
   float:left;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: $mainGutter/20 $mainGutter/4;
+  &:hover{text-decoration: line-through;}
   }
+.filter-group-0 a.webkite-remove-filter{
+  background: $tokenFirst;
+  }
+.filter-group-1 a.webkite-remove-filter{
+  background: $tokenSecond;
+  }
+.filter-group-2 a.webkite-remove-filter{
+  background: $tokenThird;
+  }
+.filter-group-3 a.webkite-remove-filter{
+  background: $tokenFourth;
+  }
+.filter-group-4 a.webkite-remove-filter{
+  background: $tokenFifth;
+  }
+  
+/* clear everything */ 
 #webkite-results a.webkite-clear-filters{
   background: $linkColor;
   color: white;
   font-size: .5rem;
   font-weight: 700;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   vertical-align: text-top;
   padding: 0 $mainGutter/4 $mainGutter/12 $mainGutter/4;
   @include roundedUp (50%);
@@ -266,6 +299,14 @@ input.webkite-page-input{
     width: 100%;
     padding-right: 0;
     }
+  .webkite-filter-area, .webkite-sort-area, select.webkite-sort{
+    width: 100%;
+    }
+  .webkite-filter-area{
+    margin-top: $mainGutter;
+    margin-left: 0;
+    padding-left: 0;
+    }
   .webkite-block ul li{
     b, a, span{width: 100%;}
     }
@@ -281,6 +322,14 @@ input.webkite-page-input{
   }
   
 #webkite-results.sm{
+  .webkite-filter-area, .webkite-sort-area, select.webkite-sort{
+    width: 100%;
+    }
+  .webkite-filter-area{
+    margin-top: $mainGutter;
+    margin-left: 0;
+    padding-left: 0;
+    }
   .webkite-block ul li{
     b, a, span{width: 100%;}
     }

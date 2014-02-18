@@ -1,9 +1,14 @@
 <div class="webkite-applied-filters">
   <div class="label">filters <b>&#10010</b></div>
   <div class="current-filters">
-  {{#each currentFilters}}
-    <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a>
-  {{/each}}
+  {{#each filterGroups}}
+  <div class="filter-group-{{@index}}">
+    {{#each filters}}
+      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}{{log @last}}</span>
+    {{/each}}      
+  </div>
+  <span>{{#unless @last}} & {{/unless}}{{log @last}}</span>
+{{/each}}
   <a href="#" class="webkite-clear-filters">x</a>
   </div>
 </div>
