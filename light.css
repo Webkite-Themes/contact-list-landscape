@@ -131,7 +131,7 @@ div.webkite-sort {
     line-height: 1.2rem;
     margin: 0 0.3125rem; }
 
-.webkite-filter-area .label {
+.webkite-filter-area .label > a {
   -webkit-border-radius: 0.188rem 0 0 0.188rem;
   -moz-border-radius: 0.188rem 0 0 0.188rem;
   -ms-border-radius: 0.188rem 0 0 0.188rem;
@@ -196,6 +196,56 @@ div.webkite-sort {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%; }
+
+/**************************************** FILTER DROPDOWN */
+.filter-menu {
+  -webkit-border-radius: 0.375rem;
+  -moz-border-radius: 0.375rem;
+  -ms-border-radius: 0.375rem;
+  -o-border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  -webkit-box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  background: white;
+  font-size: .875rem;
+  padding: 0.625rem 0;
+  position: absolute;
+  z-index: 3; }
+
+.filter-menu li {
+  list-style-type: none;
+  position: relative; }
+
+#webkite-results .filter-menu li a {
+  display: block;
+  padding: 0 0.625rem; }
+  #webkite-results .filter-menu li a:hover {
+    background: #1b9cd2;
+    color: white; }
+
+.filter-menu-child {
+  -webkit-border-radius: 0.375rem;
+  -moz-border-radius: 0.375rem;
+  -ms-border-radius: 0.375rem;
+  -o-border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  -webkit-box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 0.625rem 0;
+  left: 100%;
+  top: 0; }
+
+.filter-menu li:hover .filter-menu-child {
+  display: block; }
 
 /********************************************* PAGINATION */
 .webkite-results-paginator {

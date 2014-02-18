@@ -2,6 +2,7 @@
 
 @import 'light-palette';
 
+$shadowOpacity: rgba(0,0,0,.2);
 $linkColor: #1b9cd2;
 $linkHover: #0073a7;
 
@@ -27,6 +28,11 @@ $mainGutter: 1.25rem;
   -webkit-box-sizing:border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  }
+@mixin shadowHere{
+  -webkit-box-shadow: 0 .125rem .313rem $shadowOpacity;
+  -moz-box-shadow: 0 .125rem .313rem $shadowOpacity;
+  box-shadow: 0 .125rem .313rem $shadowOpacity;
   }
 @mixin breakThat{
   &:after{
@@ -153,7 +159,7 @@ div.webkite-sort{
     margin: 0 $mainGutter/4;
     }
   }
-.webkite-filter-area .label{
+.webkite-filter-area .label > a{
   @include roundedUp(.188rem 0 0 .188rem);
   background: $lightestOpacity;
   border: 1px solid $lightestOpacity;
@@ -207,7 +213,45 @@ div.webkite-sort{
   padding: 0 $mainGutter/4 $mainGutter/12 $mainGutter/4;
   @include roundedUp (50%);
   }
-
+/**************************************** FILTER DROPDOWN */
+.filter-menu{
+  @include roundedUp(.375rem);
+  @include shadowHere;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  background: white;
+  font-size: .875rem;
+  padding: $mainGutter/2 0;
+  position: absolute;
+  z-index: 3; 
+  }
+.filter-menu li{
+  list-style-type: none;
+  position: relative;
+  }
+#webkite-results .filter-menu li a{
+  display: block;
+  padding: 0 $mainGutter/2;
+  &:hover{
+    background: $linkColor;
+    color: white;
+    } 
+  }
+.filter-menu-child{
+  @include roundedUp(.375rem);
+  @include shadowHere;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  display: none; 
+  position: absolute; 
+  background: white;
+  padding: $mainGutter/2 0;
+  left: 100%;
+  top: 0;
+  }
+.filter-menu li:hover .filter-menu-child{
+  display: block;
+  }
 /********************************************* PAGINATION */
 .webkite-results-paginator{
   font-size: 1rem;

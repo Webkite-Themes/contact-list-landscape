@@ -1,13 +1,58 @@
 <div class="webkite-applied-filters">
-  <div class="label">filters <b>&#10010</b></div>
+  <div class="label"><a class="webkite-toggle" href="#{{this.id}} data-id=""{{this.id}}" data-target=".filter-menu">filters <b>&#10010</b></a>
+    <ul class="filter-menu webkite-hide">
+    	<li><a href="">Option One</a>
+      	<ul class="filter-menu-child">
+      		<li><a href="#" class="webkite-toggle" data-target=".filter-menu">Blah</a></li>
+      		<li><a href="">Dee</a></li>
+      		<li><a href="">Bleh</a></li>
+      		<li><a href="">Doo</a></li>
+      		<li><a href="">Blee</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="">Option Two</a>
+      	<ul class="filter-menu-child">
+      		<li><a href="">Blah</a></li>
+      		<li><a href="">Dee</a></li>
+      		<li><a href="">Bleh</a></li>
+      		<li><a href="">Doo</a></li>
+      		<li><a href="">Blee</a></li>
+      		<li><a href="">Blah</a></li>
+      		<li><a href="">Dee</a></li>
+      		<li><a href="">Bleh</a></li>
+      		<li><a href="">Doo</a></li>
+      		<li><a href="">Blee</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="">Option Two</a>
+    	<ul class="filter-menu-child">
+    		<li><a href="">Blah</a></li>
+    		<li><a href="">Dee</a></li>
+    		<li><a href="">Bleh</a></li>
+    		<li><a href="">Doo</a></li>
+    		<li><a href="">Blee</a></li>
+    		<li><a href="">Blah</a></li>
+    		<li><a href="">Dee</a></li>
+    		<li><a href="">Bleh</a></li>
+    		<li><a href="">Doo</a></li>
+    		<li><a href="">Blee</a></li>
+    		<li><a href="">Blah</a></li>
+    		<li><a href="">Dee</a></li>
+    		<li><a href="">Bleh</a></li>
+    		<li><a href="">Doo</a></li>
+    		<li><a href="">Blee</a></li>
+    	</ul>
+    	</li>
+    </ul>
+  </div>
   <div class="current-filters">
   {{#each filterGroups}}
   <div class="filter-group-{{@index}}">
     {{#each filters}}
-      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}{{log @last}}</span>
+      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
     {{/each}}      
   </div>
-  <span>{{#unless @last}} & {{/unless}}{{log @last}}</span>
+  <span>{{#unless @last}} & {{/unless}}</span>
 {{/each}}
   <a href="#" class="webkite-clear-filters">x</a>
   </div>
