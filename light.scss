@@ -165,6 +165,7 @@ div.webkite-sort{
   position: absolute;
   z-index: 2;
   left: 0;
+  @include boxedUp;
   @include roundedUp(.188rem 0 0 .188rem);
   background: $lightestOpacity;
   border: 1px solid $lightestOpacity;
@@ -218,6 +219,7 @@ div.webkite-sort{
   }
 /**************************************** FILTER DROPDOWN */
 .filter-menu{
+  margin: 0;
   @include roundedUp(.375rem);
   @include shadowHere;
   -webkit-padding-start: 0;
@@ -251,6 +253,7 @@ div.webkite-sort{
   padding: $mainGutter/2 0;
   left: 100%;
   top: 0;
+  margin: 0;
   }
 .filter-menu li:hover .filter-menu-child{
   display: block;
