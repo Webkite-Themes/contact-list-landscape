@@ -15,10 +15,15 @@
 	</div><!--webkite-block-forty-->
 	<div class="webkite-block sixty">
   	<ul>
-  	  <li>{{#facet name="home address"}}
-  	    <b>{{capitalize name}}</b>
-        <a href="http://maps.google.com/?q={{displayValue}}">{{displayValue}}</a>
-      </li>{{/facet}}
+  	  <li>
+  	    <b>Home Address</b>
+        <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
+        {{#facet name="Address 1"}}{{displayValue}}{{/facet}}
+        {{#if (equals "Address 2")}}<br>{{#facet name="Address 2"}}{{displayValue}}{{/facet}}{{/if}}<br>
+        {{#facet name="City"}}{{displayValue}}{{/facet}}, {{#facet name="State"}}{{displayValue}}{{/facet}}
+        {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
+        </a>
+      </li>
       <li>{{#facet name="Email"}}
   	    <b>{{name}}</b>
         <a href="mailto:{{displayValue}}">{{displayValue}}</a>
@@ -27,11 +32,11 @@
   	    <b>{{name}}</b>
         <a href="tel:{{displayValue}}">{{displayValue}}</a>
       </li>{{/facet}}
-      <li>{{#facet name="University"}}
+      {{#facet name="University"}}<li>
         <b>{{name}}</b>
         <a href="#" class="webkite-add-filter" data-facet="{{this.id}}" data-operator="like" data-value="{{this.text}}">{{displayValue}}</a>
       </li>{{/facet}}
-      <li>{{#facet name="Department"}}
+      {{#facet name="Department"}}<li>
         <b>{{name}}</b>
         <a href="#" class="webkite-add-filter" data-facet="{{this.id}}" data-operator="like" data-value="{{this.text}}">{{displayValue}}</a>
       </li>{{/facet}}
@@ -39,12 +44,11 @@
   	<div id="{{this.id}}" class="webkite-item-details">
     	<ul>
       {{#each facets}}
-      {{#unless (equals name "Name" "Email" "home address" "Number")}}
+      {{#unless (equals name "First Name" "Last Name" "Email" "Address 1" "Address 2" "City" "State" "Zip Code" "Country" "Phone Number")}}
     	<li><b>{{name}}</b> <span>{{displayValue}}</span></li>
     	{{/unless}}
       {{/each}}
     </ul>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=+935+second+rd,+pittsburgh+pa+15218&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=54.884801,80.595703&amp;ie=UTF8&amp;hq=&amp;hnear=935+Second+Ave,+Pittsburgh,+Pennsylvania+15282&amp;t=m&amp;z=14&amp;ll=40.434816,-79.992461&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=+935+second+rd,+pittsburgh+pa+15218&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=54.884801,80.595703&amp;ie=UTF8&amp;hq=&amp;hnear=935+Second+Ave,+Pittsburgh,+Pennsylvania+15282&amp;t=m&amp;z=14&amp;ll=40.434816,-79.992461" style="color:#0000FF;text-align:left">View Larger Map</a></small>
   	</div><!-- webkite-item-details -->
 	</div><!--webkite-block sixty-->
   <footer class="webkite-result-footer">

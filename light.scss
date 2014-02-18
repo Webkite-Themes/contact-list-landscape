@@ -103,8 +103,9 @@ select.webkite-sort{
   font-size: 0.875rem;
   font-weight: 700;
   height: 1.938rem;
+  margin: 0;
   padding: $mainGutter/4;
-  /* width: 4.063rem; */
+  width: 5.625rem;
   -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: '';
@@ -159,7 +160,11 @@ div.webkite-sort{
     margin: 0 $mainGutter/4;
     }
   }
-.webkite-filter-area .label > a{
+#webkite-results .webkite-applied-filters > a{
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  left: 0;
   @include roundedUp(.188rem 0 0 .188rem);
   background: $lightestOpacity;
   border: 1px solid $lightestOpacity;
@@ -168,13 +173,11 @@ div.webkite-sort{
   font-size: 0.875rem;
   font-weight: 700;
   padding: $mainGutter/4;
-  position: absolute;
-  z-index: 2;
-  left: 0;
   } 
-.webkite-filter-area .label b{
+.webkite-applied-filters > a b{
   font-size: .8rem;
   opacity: .5;
+  pointer-events: none;
   }
 /* tokens */
 #webkite-results a.webkite-remove-filter{
