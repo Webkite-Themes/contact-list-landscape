@@ -3,11 +3,11 @@
     <ul class="filter-menu webkite-hide">
       <li><a href="#">Department</a>
         <ul class="filter-menu-child">
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Department" data-operator="like" data-value="Customer">Customer</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Department" data-operator="like" data-value="Development">Development</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Department" data-operator="like" data-value="Executive">Executive</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Department" data-operator="like" data-value="Office">Office</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Department" data-operator="like" data-value="Sales">Sales</a></li>
+      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Customer" data-operator="is">Customer</a></li>
+      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Development" data-operator="is">Development</a></li>
+      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Executive" data-operator="is">Executive</a></li>
+      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Office" data-operator="is">Office</a></li>
+      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Sales" data-operator="is">Sales</a></li>
       	</ul>
     	</li>
     	<li><a href="">Option Two</a>
@@ -48,7 +48,7 @@
   {{#each filterGroups}}
   <div class="filter-group-{{@index}}">
     {{#each filters}}
-      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
+      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.facet}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
     {{/each}}      
   </div>
   <span>{{#unless @last}} & {{/unless}}</span>
