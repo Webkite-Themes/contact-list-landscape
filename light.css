@@ -151,7 +151,8 @@ div.webkite-sort {
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.875rem;
   font-weight: 700;
-  padding: 0.3125rem; }
+  padding: 0.3125rem;
+  height: 1.938rem; }
 
 .webkite-applied-filters > a b, .webkite-applied-filters > a .webkite-block ul li a, .webkite-block ul li .webkite-applied-filters > a a, .webkite-applied-filters > a .webkite-block ul li span, .webkite-block ul li .webkite-applied-filters > a span {
   font-size: .8rem;
@@ -220,7 +221,9 @@ div.webkite-sort {
   font-size: .875rem;
   padding: 0.625rem 0;
   position: absolute;
-  z-index: 3; }
+  z-index: 3;
+  top: 0.625rem;
+  left: 0.625rem; }
 
 .filter-menu li {
   list-style-type: none;
