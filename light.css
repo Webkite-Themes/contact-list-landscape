@@ -180,6 +180,8 @@
     font-size: 0.875em;
     font-weight: 700;
     padding: 0.3125em 0 0.3125em 0.3125em;
+    line-height: 2em;
+    padding: 0 0.3125em 0 0.3125em;
     height: 2em; }
   #webkite-results .webkite-applied-filters > a b, #webkite-results .webkite-applied-filters > a .webkite-block ul li a, #webkite-results .webkite-block ul li .webkite-applied-filters > a a, #webkite-results .webkite-applied-filters > a .webkite-block ul li span, #webkite-results .webkite-block ul li .webkite-applied-filters > a span {
     font-size: .8em;
