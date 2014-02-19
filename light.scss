@@ -98,6 +98,13 @@ $mainGutter: 1.25em;
       display: inline-block;
       vertical-align:middle;
       }
+    /* light theme only */
+    .webkite-branding-area a {
+      background: url("branding.svg") center top no-repeat;
+      display: inline-block;
+      height: 2.813em;
+      width: 8.5em;
+      }
     }
   .webkite-results-footer{
     height: 2.813em;
@@ -132,7 +139,7 @@ $mainGutter: 1.25em;
       opacity: .5;
       position: absolute;
       right: $mainGutter/2;
-      top:20%;
+      top:12%;
       pointer-events: none;
       }
     }

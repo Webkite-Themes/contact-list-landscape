@@ -66,7 +66,8 @@
 /******************************************** NAVIGATIONALS */
 #webkite-results .webkite-results-header, #webkite-results .webkite-results-footer {
   text-align: justify;
-  position: relative; }
+  position: relative;
+  /* light theme only */ }
   #webkite-results .webkite-results-header h1, #webkite-results .webkite-results-footer h1 {
     text-align: left; }
   #webkite-results .webkite-results-header:after, #webkite-results .webkite-results-footer:after {
@@ -80,6 +81,11 @@
   #webkite-results .webkite-results-header .webkite-title-area, #webkite-results .webkite-results-header .webkite-sort-area, #webkite-results .webkite-results-header .webkite-filter-area, #webkite-results .webkite-results-header .webkite-branding-area, #webkite-results .webkite-results-header .webkite-pagination-area, #webkite-results .webkite-results-footer .webkite-title-area, #webkite-results .webkite-results-footer .webkite-sort-area, #webkite-results .webkite-results-footer .webkite-filter-area, #webkite-results .webkite-results-footer .webkite-branding-area, #webkite-results .webkite-results-footer .webkite-pagination-area {
     display: inline-block;
     vertical-align: middle; }
+  #webkite-results .webkite-results-header .webkite-branding-area a, #webkite-results .webkite-results-footer .webkite-branding-area a {
+    background: url("branding.svg") center top no-repeat;
+    display: inline-block;
+    height: 2.813em;
+    width: 8.5em; }
 #webkite-results .webkite-results-footer {
   height: 2.813em; }
 
@@ -112,7 +118,7 @@
     opacity: .5;
     position: absolute;
     right: 0.625em;
-    top: 20%;
+    top: 12%;
     pointer-events: none; }
 
 /************************************************ FILTERS */
