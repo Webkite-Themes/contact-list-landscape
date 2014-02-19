@@ -52,8 +52,8 @@ $mainGutter: 1.25em;
 
 /****************************************** BEGIN STYLES */
 #webkite-results{
-  background: rgba(255,255,255,.95);
-  border: 1px solid rgba(255,255,255,.1);
+  background: $backgroundColor;
+  border: 1px solid $lighterOpacity;
   @include roundedUp(.625em);
   @include boxedUp;
   max-width: 43.750em;
