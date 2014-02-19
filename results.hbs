@@ -53,15 +53,15 @@
         </li>
         <li>
           <b>university</b>
-          {{#each (facets parent="University")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="University"}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{/facet}}
         </li>
         <li>
           <b>degree</b>
-          {{#each (facets parent="Degree")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Degree"}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{/facet}}
         </li>
         <li>
           <b>year of graduation</b>
@@ -71,15 +71,15 @@
         </li>
         <li>
           <b>employer</b>
-          {{#each (facets parent="Employer")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Employer"}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{/facet}}
         </li>
         <li>
           <b>department</b>
-          {{#each (facets parent="Department")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Department"}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{/facet}}
         </li>
         <li>
           <b>job title</b>
