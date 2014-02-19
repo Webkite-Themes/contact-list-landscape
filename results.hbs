@@ -54,13 +54,21 @@
         <li>
           <b>university</b>
           {{#facet name="University"}}
+          {{#if filterable}}
           <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
           {{/facet}}
         </li>
         <li>
           <b>degree</b>
           {{#facet name="Degree"}}
+          {{#if filterable}}
           <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
           {{/facet}}
         </li>
         <li>
@@ -72,13 +80,21 @@
         <li>
           <b>employer</b>
           {{#facet name="Employer"}}
+          {{#if filterable}}
           <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
           {{/facet}}
         </li>
         <li>
           <b>department</b>
           {{#facet name="Department"}}
+          {{#if filterable}}
           <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
           {{/facet}}
         </li>
         <li>
