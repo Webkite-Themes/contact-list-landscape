@@ -18,8 +18,8 @@
   	  <li>
   	    <b>Home Address</b>
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
-        {{#facet name="Address 1"}}{{displayValue}}{{/facet}}
-        {{#if (equals "Address 2")}}<br>{{#facet name="Address 2"}}{{displayValue}}{{/facet}}{{/if}}<br>
+        {{#facet name="Address 1"}}{{displayValue}}<br>{{/facet}}
+        {{#facet name="Address 2"}}{{displayValue}}<br>{{/facet}}
         {{#facet name="City"}}{{displayValue}}{{/facet}}, {{#facet name="State"}}{{displayValue}}{{/facet}}
         {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         </a>
@@ -35,12 +35,38 @@
   	</ul>
   	<div id="{{this.id}}" class="webkite-item-details">
     	<ul>
-      {{#each facets}}
-      {{#unless (equals name "First Name" "Last Name" "Email" "Address 1" "Address 2" "City" "State" "Zip Code" "Country" "Phone Number")}}
-    	<li><b>{{name}}</b> <span>{{displayValue}}</span></li>
-    	{{/unless}}
-      {{/each}}
-    </ul>
+        <li>
+        {{#facet name="Website"}}
+          <b>{{name}}</b>
+          <a href="{{displayValue}}">{{displayValue}}</a>
+        {{/facet}}
+        </li>
+        <li>
+        {{#facet name="Twitter"}}
+          <b>{{name}}</b>
+          <a href="https://twitter.com/{{displayValue}}">{{displayValue}}</a>
+        {{/facet}}
+        </li>
+        <li>
+        {{#each (facets parent="University")}}
+          <b>University</b>
+          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
+        {{/each}}
+        </li>
+        <li>
+        {{#each (facets parent="Degree")}}
+          <b>Degree</b>
+          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
+        {{/each}}
+        </li>
+        <li>
+        {{#facet name="Year of Graduation"}}
+          <b>{{name}}</b>
+          {{displayValue}}
+        {{/facet}}
+        </li>
+
+      </ul>
   	</div><!-- webkite-item-details -->
 	</div><!--webkite-block sixty-->
   <footer class="webkite-result-footer">
