@@ -115,6 +115,7 @@ $mainGutter: 1.25em;
 #webkite-results{
 
   select.webkite-sort{
+    @include boxedUp;
     @include roundedUp(.188em);
     -webkit-appearance: none;
     background: $lightestOpacity;
@@ -124,11 +125,12 @@ $mainGutter: 1.25em;
     font-weight: 700;
     margin: 0;
     padding: 0 $mainGutter/4;
-    width: 5.625em;
+    width: 5.5em;
     -moz-appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
     height: 2em;
+    line-height: 1em;
     }  
   div.webkite-sort{
     position: relative;
@@ -139,7 +141,7 @@ $mainGutter: 1.25em;
       display:block;
       opacity: .5;
       position: absolute;
-      right: $mainGutter/2;
+      right: $mainGutter/4;
       top:10%;
       pointer-events: none;
       }
@@ -154,8 +156,8 @@ $mainGutter: 1.25em;
     @include boxedUp;
     width: 100%;
     position: relative;
-    padding-left: 6.5em;
-    margin-left: -6.5em;
+    padding-left: 5.5em;
+    margin-left: -5.5em;
     }
   .webkite-applied-filters{
     position: relative; 
@@ -193,7 +195,7 @@ $mainGutter: 1.25em;
     color: $lightOpacity;
     font-size: 0.875em;
     font-weight: 700;
-    line-height: 2em;
+    line-height: 1.9em;
     padding: 0 $mainGutter/4 0 $mainGutter/4;
     height: 2em;
     } 
