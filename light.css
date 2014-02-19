@@ -80,7 +80,7 @@
     white-space: pre-line; }
   #webkite-results .webkite-results-header .webkite-title-area, #webkite-results .webkite-results-header .webkite-sort-area, #webkite-results .webkite-results-header .webkite-filter-area, #webkite-results .webkite-results-header .webkite-branding-area, #webkite-results .webkite-results-header .webkite-pagination-area, #webkite-results .webkite-results-footer .webkite-title-area, #webkite-results .webkite-results-footer .webkite-sort-area, #webkite-results .webkite-results-footer .webkite-filter-area, #webkite-results .webkite-results-footer .webkite-branding-area, #webkite-results .webkite-results-footer .webkite-pagination-area {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: top; }
   #webkite-results .webkite-results-header .webkite-branding-area a, #webkite-results .webkite-results-footer .webkite-branding-area a {
     background: url("branding.svg") center top no-repeat;
     display: inline-block;
@@ -103,11 +103,12 @@
   font-size: 0.875em;
   font-weight: 700;
   margin: 0;
-  padding: 0.3125em;
+  padding: 0 0.3125em;
   width: 5.625em;
   -moz-appearance: none;
   text-indent: 0.01px;
-  text-overflow: ''; }
+  text-overflow: '';
+  height: 2em; }
 #webkite-results div.webkite-sort {
   position: relative;
   z-index: 2; }
@@ -178,7 +179,7 @@
     color: rgba(0, 0, 0, 0.6);
     font-size: 0.875em;
     font-weight: 700;
-    padding: 0.3125em;
+    padding: 0.3125em 0 0.3125em 0.3125em;
     height: 2em; }
   #webkite-results .webkite-applied-filters > a b, #webkite-results .webkite-applied-filters > a .webkite-block ul li a, #webkite-results .webkite-block ul li .webkite-applied-filters > a a, #webkite-results .webkite-applied-filters > a .webkite-block ul li span, #webkite-results .webkite-block ul li .webkite-applied-filters > a span {
     font-size: .8em;

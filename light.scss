@@ -96,7 +96,7 @@ $mainGutter: 1.25em;
     @include breakThat;
     .webkite-title-area, .webkite-sort-area, .webkite-filter-area, .webkite-branding-area, .webkite-pagination-area{
       display: inline-block;
-      vertical-align:middle;
+      vertical-align:top;
       }
     /* light theme only */
     .webkite-branding-area a {
@@ -123,11 +123,12 @@ $mainGutter: 1.25em;
     font-size: 0.875em;
     font-weight: 700;
     margin: 0;
-    padding: $mainGutter/4;
+    padding: 0 $mainGutter/4;
     width: 5.625em;
     -moz-appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
+    height: 2em;
     }  
   div.webkite-sort{
     position: relative;
@@ -192,7 +193,7 @@ $mainGutter: 1.25em;
     color: $lightOpacity;
     font-size: 0.875em;
     font-weight: 700;
-    padding: $mainGutter/4;
+    padding: $mainGutter/4 0 $mainGutter/4 $mainGutter/4;
     height: 2em;
     } 
   .webkite-applied-filters > a b{
