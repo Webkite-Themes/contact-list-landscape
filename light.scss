@@ -60,6 +60,7 @@ $mainGutter: 1.25em;
   margin: 0 auto;
   padding: $mainGutter;
   font-family:"Open Sans";
+  font-size: 16px;
   a{color:$linkColor;
       text-decoration: none; 
     &:hover{color: $linkHover;}

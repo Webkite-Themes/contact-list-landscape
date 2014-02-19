@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 16px;
+    font-size: 100%;
     font: inherit;
     vertical-align: baseline; }
   #webkite-results article, #webkite-results aside, #webkite-results details, #webkite-results figcaption, #webkite-results figure, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results section {
@@ -42,7 +42,8 @@
   max-width: 43.750em;
   margin: 0 auto;
   padding: 1.25em;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  font-size: 16px; }
   #webkite-results a {
     color: #1b9cd2;
     text-decoration: none; }
