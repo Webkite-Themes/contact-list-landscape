@@ -14,7 +14,7 @@ $tokenFourth: #e6af52;
 $tokenFifth: #6f7ca8;
 
 //SIZES
-$mainGutter: 1.25rem;
+$mainGutter: 1.25em;
 
 //MIXINS
 @mixin roundedUp($radius){
@@ -30,9 +30,9 @@ $mainGutter: 1.25rem;
   box-sizing: border-box;
   }
 @mixin shadowHere{
-  -webkit-box-shadow: 0 .125rem .313rem $shadowOpacity;
-  -moz-box-shadow: 0 .125rem .313rem $shadowOpacity;
-  box-shadow: 0 .125rem .313rem $shadowOpacity;
+  -webkit-box-shadow: 0 .125em .313em $shadowOpacity;
+  -moz-box-shadow: 0 .125em .313em $shadowOpacity;
+  box-shadow: 0 .125em .313em $shadowOpacity;
   }
 @mixin breakThat{
   &:after{
@@ -45,13 +45,18 @@ $mainGutter: 1.25rem;
   
 @include web-font((Open Sans) (300,400,400i,700,700i));
 
+/* RESET */
+#webkite-results{
+  @import 'reset';
+  }
+
 /****************************************** BEGIN STYLES */
 #webkite-results{
   background: rgba(255,255,255,.95);
   border: 1px solid rgba(255,255,255,.1);
-  @include roundedUp(.625rem);
+  @include roundedUp(.625em);
   @include boxedUp;
-  max-width: 43.750rem;
+  max-width: 43.750em;
   margin: 0 auto;
   padding: $mainGutter;
   font-family:"Open Sans";
@@ -62,274 +67,294 @@ $mainGutter: 1.25rem;
   }
   
 /* TYPOGRAPHY */
-h1, h2{
-  margin: 0;
-  }
-h1{
-  font: 300 2.25rem/1 "Open Sans";
-  color: $highOpacity;
-  margin-bottom: $mainGutter;
-  }
-h2{
-  font: 700 1.5rem/1 "Open Sans";
-  color: $medOpacity;
-  }
-p, li{
-  color: $lightOpacity;
+#webkite-results{
+  h1, h2{
+    margin: 0;
+    }
+  h1{
+    font: 300 2.25em/1 "Open Sans";
+    color: $highOpacity;
+    margin-bottom: $mainGutter;
+    }
+  h2{
+    font: 700 1.5em/1 "Open Sans";
+    color: $medOpacity;
+    }
+  p, li{
+    color: $lightOpacity;
+    }
   }
 
 /******************************************** NAVIGATIONALS */
-.webkite-results-header, .webkite-results-footer{
-  text-align: justify;
-  position: relative;
-  h1{text-align: left;}
-  @include breakThat;
-  .webkite-title-area, .webkite-sort-area, .webkite-filter-area, .webkite-branding-area, .webkite-pagination-area{
-    display: inline-block;
-    vertical-align:middle;
-    }
-  }
-.webkite-results-footer{
-  height: 2.813rem;
-  }
-  
-/************************************************* SORTS */
-select.webkite-sort{
-  @include roundedUp(.188rem);
-  -webkit-appearance: none;
-  background: $lightestOpacity;
-  color: $lightOpacity;
-  border: 1px solid $lighterOpacity;
-  font-size: 0.875rem;
-  font-weight: 700;
-  height: 1.938rem;
-  margin: 0;
-  padding: $mainGutter/4;
-  width: 5.625rem;
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-  }
-  
-div.webkite-sort{
-  position: relative;
-  z-index: 2;
-  &:after{
-    content: "\25BE";
-    color: $lightOpacity;
-    display:block;
-    opacity: .5;
-    position: absolute;
-    right: $mainGutter/2;
-    top:20%;
-    pointer-events: none;
-    }
-  }
+#webkite-results{
 
+  .webkite-results-header, .webkite-results-footer{
+    text-align: justify;
+    position: relative;
+    h1{text-align: left;}
+    @include breakThat;
+    .webkite-title-area, .webkite-sort-area, .webkite-filter-area, .webkite-branding-area, .webkite-pagination-area{
+      display: inline-block;
+      vertical-align:middle;
+      }
+    }
+  .webkite-results-footer{
+    height: 2.813em;
+    }
+    
+  } 
+/************************************************* SORTS */
+#webkite-results{
+
+  select.webkite-sort{
+    @include roundedUp(.188em);
+    -webkit-appearance: none;
+    background: $lightestOpacity;
+    color: $lightOpacity;
+    border: 1px solid $lighterOpacity;
+    font-size: 0.875em;
+    font-weight: 700;
+    margin: 0;
+    padding: $mainGutter/4;
+    width: 5.625em;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    }  
+  div.webkite-sort{
+    position: relative;
+    z-index: 2;
+    &:after{
+      content: "\25BE";
+      color: $lightOpacity;
+      display:block;
+      opacity: .5;
+      position: absolute;
+      right: $mainGutter/2;
+      top:20%;
+      pointer-events: none;
+      }
+    }
+  
+  }
 
 /************************************************ FILTERS */
-.webkite-filter-area{
-  @include boxedUp;
-  width: 100%;
-  position: relative;
-  padding-left: 6.5rem;
-  margin-left: -6.5rem;
-  }
-.webkite-filter-area .label, .current-filters{
-  display: inline-block;
-  }
-.webkite-applied-filters{
-  position: relative; 
-  }
-.current-filters{
-  @include roundedUp(.188rem);
-  @include boxedUp;
-  background: white;
-  border: 1px solid $lighterOpacity;
-  height: 1.938rem;
-  padding: $mainGutter/4;
-  padding-left: 4.5rem;
-  width: 100%;
-  text-align: end;
-  /* and & or */
-  span{
-    color: $lightOpacity;
-    float: left;
-    font-size: .875rem;
-    line-height: 1.2rem;
-    margin: 0 $mainGutter/4;
+#webkite-results{
+
+  .webkite-filter-area{
+    @include boxedUp;
+    width: 100%;
+    position: relative;
+    padding-left: 6.5em;
+    margin-left: -6.5em;
     }
-  }
-#webkite-results .webkite-applied-filters > a{
-  display: inline-block;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  @include boxedUp;
-  @include roundedUp(.188rem 0 0 .188rem);
-  background: $lightestOpacity;
-  border: 1px solid $lightestOpacity;
-  border-right: 1px solid $lighterOpacity;
-  color: $lightOpacity;
-  font-size: 0.875rem;
-  font-weight: 700;
-  padding: $mainGutter/4;
-  height: 1.938rem;
-  } 
-.webkite-applied-filters > a b{
-  font-size: .8rem;
-  opacity: .5;
-  pointer-events: none;
-  }
-/* tokens */
-#webkite-results a.webkite-remove-filter{
-  @include roundedUp (.188rem);
-  color: white;
-  float:left;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  padding: $mainGutter/20 $mainGutter/4;
-  &:hover{text-decoration: line-through;}
-  }
-.filter-group-0 a.webkite-remove-filter{
-  background: $tokenFirst;
-  }
-.filter-group-1 a.webkite-remove-filter{
-  background: $tokenSecond;
-  }
-.filter-group-2 a.webkite-remove-filter{
-  background: $tokenThird;
-  }
-.filter-group-3 a.webkite-remove-filter{
-  background: $tokenFourth;
-  }
-.filter-group-4 a.webkite-remove-filter{
-  background: $tokenFifth;
-  }
-  
-/* clear everything */ 
-#webkite-results a.webkite-clear-filters{
-  background: $linkColor;
-  color: white;
-  font-size: .5rem;
-  font-weight: 700;
-  line-height: 1.2rem;
-  vertical-align: text-top;
-  padding: 0 $mainGutter/4 $mainGutter/12 $mainGutter/4;
-  @include roundedUp (50%);
-  }
-/**************************************** FILTER DROPDOWN */
-.filter-menu{
-  margin: 0;
-  @include roundedUp(.375rem);
-  @include shadowHere;
-  -webkit-padding-start: 0;
-  -moz-padding-start: 0;
-  background: white;
-  font-size: .875rem;
-  padding: $mainGutter/2 0;
-  position: absolute;
-  z-index: 3;
-  top: $mainGutter/2;
-  left: $mainGutter/2;
-  }
-.filter-menu li{
-  list-style-type: none;
-  position: relative;
-  }
-#webkite-results .filter-menu li a{
-  display: block;
-  padding: 0 $mainGutter/2;
-  &:hover{
+  .webkite-applied-filters{
+    position: relative; 
+    }
+  .current-filters{
+    @include roundedUp(.188em);
+    @include boxedUp;
+    background: white;
+    border: 1px solid $lighterOpacity;
+    display: inline-block;
+    height: 1.75em;
+    padding: $mainGutter/4;
+    padding-left: 4.5em;
+    width: 100%;
+    text-align: end;
+    /* and & or */
+    span{
+      color: $lightOpacity;
+      float: left;
+      font-size: .875em;
+      line-height: 1.2em;
+      margin: 0 $mainGutter/4;
+      }
+    }
+  .webkite-applied-filters > a{
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    @include boxedUp;
+    @include roundedUp(.188em 0 0 .188em);
+    background: $lightestOpacity;
+    border: 1px solid $lightestOpacity;
+    border-right: 1px solid $lighterOpacity;
+    color: $lightOpacity;
+    font-size: 0.875em;
+    font-weight: 700;
+    padding: $mainGutter/4;
+    height: 2em;
+    } 
+  .webkite-applied-filters > a b{
+    font-size: .8em;
+    opacity: .5;
+    pointer-events: none;
+    }
+  /* tokens */
+  a.webkite-remove-filter{
+    @include roundedUp (.188em);
+    color: white;
+    float:left;
+    font-size: 0.875em;
+    line-height: 1em;
+    padding: $mainGutter/20 $mainGutter/4;
+    &:hover{text-decoration: line-through;}
+    }
+  .filter-group-0 a.webkite-remove-filter{
+    background: $tokenFirst;
+    }
+  .filter-group-1 a.webkite-remove-filter{
+    background: $tokenSecond;
+    }
+  .filter-group-2 a.webkite-remove-filter{
+    background: $tokenThird;
+    }
+  .filter-group-3 a.webkite-remove-filter{
+    background: $tokenFourth;
+    }
+  .filter-group-4 a.webkite-remove-filter{
+    background: $tokenFifth;
+    }
+  /* clear everything */ 
+  a.webkite-clear-filters{
     background: $linkColor;
     color: white;
-    } 
-  }
-.filter-menu-child{
-  @include roundedUp(.375rem);
-  @include shadowHere;
-  -webkit-padding-start: 0;
-  -moz-padding-start: 0;
-  display: none; 
-  position: absolute; 
-  background: white;
-  padding: $mainGutter/2 0;
-  left: 100%;
-  top: 0;
-  margin: 0;
-  }
-.filter-menu li:hover .filter-menu-child{
-  display: block;
-  }
-/********************************************* PAGINATION */
-.webkite-results-paginator{
-  font-size: 1rem;
-  & a, & p{display: inline;}
-  & a{font-size: 1.2rem; line-height: 0;}
-  }
-/* page input */
-input.webkite-page-input{
-  @include roundedUp(.188rem);
-  border: 1px solid $lighterOpacity;
-  padding: $mainGutter/4;
-  max-width: 1.5rem; 
-  font-size: .9rem;
-  color: $lightOpacity;
-  }
-/* remove arrows */
-.webkite-page-input::-webkit-outer-spin-button,
-.webkite-page-input::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-  margin: 0;
-  }
+    font-size: .5em;
+    font-weight: 700;
+    line-height: 1.6em;
+    vertical-align: text-top;
+    padding: 0 .65em .25em .65em;
+    @include roundedUp (50%);
+    }
   
-/********************************************** BLOCKS */
-.webkite-block{
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  @include boxedUp;
-  &:first-child{padding-right: $mainGutter;}
-  ul{
+  }
+/**************************************** FILTER DROPDOWN */
+#webkite-results{
+
+  .filter-menu{
     margin: 0;
+    @include roundedUp(.375em);
+    @include shadowHere;
     -webkit-padding-start: 0;
     -moz-padding-start: 0;
-    li{
-      list-style-type: none;
-      text-align: justify;
-      padding-bottom: $mainGutter/2;
-      b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;}
-      a, span{@extend b; width:59%;}   
-      }  
+    background: white;
+    font-size: .875em;
+    padding: $mainGutter/2 0;
+    position: absolute;
+    z-index: 3;
+    top: $mainGutter/2;
+    left: $mainGutter/2;
     }
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: $mainGutter/2;
-    @include roundedUp(0.188rem);
+  .filter-menu li{
+    list-style-type: none;
+    position: relative;
     }
+  .filter-menu li a{
+    display: block;
+    padding: 0 $mainGutter/2;
+    &:hover{
+      background: $linkColor;
+      color: white;
+      } 
+    }
+  .filter-menu-child{
+    @include roundedUp(.375em);
+    @include shadowHere;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    display: none; 
+    position: absolute; 
+    background: white;
+    padding: $mainGutter/2 0;
+    left: 100%;
+    top: 0;
+    margin: 0;
+    }
+  .filter-menu li:hover .filter-menu-child{
+    display: block;
+    }
+  
   }
-.webkite-block.sixty{
-  width: 59%;
-  }
-.webkite-block.forty{
- width: 39%;
+/********************************************* PAGINATION */
+#webkite-results{
+
+  .webkite-results-paginator{
+    font-size: 1em;
+    & a, & p{display: inline;}
+    & a{font-size: 1.2em; line-height: 0;}
+    }
+  /* page input */
+  input.webkite-page-input{
+    @include roundedUp(.188em);
+    border: 1px solid $lighterOpacity;
+    padding: $mainGutter/4;
+    max-width: 1.5em; 
+    font-size: .9em;
+    color: $lightOpacity;
+    }
+  /* remove arrows */
+  .webkite-page-input::-webkit-outer-spin-button,
+  .webkite-page-input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    
+}
+  
+/********************************************** BLOCKS */
+#webkite-results{
+
+  .webkite-block{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    @include boxedUp;
+    &:first-child{padding-right: $mainGutter;}
+    ul{
+      margin: 0;
+      -webkit-padding-start: 0;
+      -moz-padding-start: 0;
+      li{
+        list-style-type: none;
+        text-align: justify;
+        padding-bottom: $mainGutter/2;
+        b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;font-weight: 700;}
+        a, span{@extend b; width:59%; font-weight: 400;}
+        }  
+      }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: $mainGutter/2;
+      @include roundedUp(0.188em);
+      }
+    }
+  .webkite-block.sixty{
+    width: 59%;
+    }
+  .webkite-block.forty{
+   width: 39%;
+    }
+  
   }
   
-/************************************ LANDSCAPE RESULTS */  
-.webkite-result{
-  text-align: justify;
-  position: relative;
-  @include breakThat;
-  }
+/************************************ LANDSCAPE RESULTS */
 #webkite-results{
+  
+  .webkite-result{
+    text-align: justify;
+    position: relative;
+    @include breakThat;
+    }
   a.more-button{
     background: $linkColor;
     color: white;
     display: inline-block;
     padding: $mainGutter/4 $mainGutter/2;
     margin-bottom: $mainGutter;
-    @include roundedUp(.188rem);
+    @include roundedUp(.188em);
     &:hover{background: $linkHover;}
     }
   a.less-button{
@@ -337,13 +362,14 @@ input.webkite-page-input{
     background: $lightOpacity;
     &:hover{background: $lightOpacity*2;}
     }
-}
-.webkite-result-footer{
-  clear: both;
-  display: block;
-  padding-top: $mainGutter;
-  border-bottom: 1px solid $lightestOpacity;
-  text-align: right;
+  .webkite-result-footer{
+    clear: both;
+    display: block;
+    padding-top: $mainGutter;
+    border-bottom: 1px solid $lightestOpacity;
+    text-align: right;
+    }
+  
   }
   
 /************************************** ELEMENT QUERIES */
@@ -370,7 +396,7 @@ input.webkite-page-input{
     padding-bottom: $mainGutter; 
     }
   .webkite-results-footer{
-    height: 2.813rem*2+$mainGutter;
+    height: 2.813em*2+$mainGutter;
     }
   }
   
