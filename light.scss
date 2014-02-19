@@ -254,7 +254,8 @@ $mainGutter: 1.25em;
     }
   .filter-menu li a{
     display: block;
-    padding: 0 $mainGutter/2;
+    padding: $mainGutter/8 $mainGutter/2;
+    white-space: pre;
     &:hover{
       background: $linkColor;
       color: white;

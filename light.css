@@ -240,7 +240,8 @@
   position: relative; }
 #webkite-results .filter-menu li a {
   display: block;
-  padding: 0 0.625em; }
+  padding: 0.15625em 0.625em;
+  white-space: pre; }
   #webkite-results .filter-menu li a:hover {
     background: #1b9cd2;
     color: white; }
