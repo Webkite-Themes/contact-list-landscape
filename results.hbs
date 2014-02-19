@@ -86,14 +86,12 @@
           {{displayValue}}
           {{/facet}}
         </li>
-
       </ul>
   	</div><!-- webkite-item-details -->
+  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
+  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
 	</div><!--webkite-block sixty-->
-  <footer class="webkite-result-footer">
-    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
-    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
-  </footer>
+  <footer class="webkite-result-footer"></footer>
 </section>
 {{/each}}
 

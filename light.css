@@ -119,7 +119,7 @@
     opacity: .5;
     position: absolute;
     right: 0.625em;
-    top: 12%;
+    top: 10%;
     pointer-events: none; }
 
 /************************************************ FILTERS */
@@ -179,7 +179,6 @@
     color: rgba(0, 0, 0, 0.6);
     font-size: 0.875em;
     font-weight: 700;
-    padding: 0.3125em 0 0.3125em 0.3125em;
     line-height: 2em;
     padding: 0 0.3125em 0 0.3125em;
     height: 2em; }
@@ -356,17 +355,25 @@
     padding: 0;
     white-space: pre-line; }
 #webkite-results a.more-button, #webkite-results a.less-button {
-  background: #1b9cd2;
-  color: white;
-  display: inline-block;
-  padding: 0.3125em 0.625em;
-  margin-bottom: 1.25em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-border-radius: 0.188em;
   -moz-border-radius: 0.188em;
   -ms-border-radius: 0.188em;
   -o-border-radius: 0.188em;
-  border-radius: 0.188em; }
-  #webkite-results a.more-button:hover, #webkite-results a.less-button:hover {
+  border-radius: 0.188em;
+  color: white;
+  display: inline-block;
+  float: right;
+  font: 400 .75em/1 "Open Sans";
+  padding: 0.3125em 0.625em;
+  margin-top: 1.25em;
+  text-align: center;
+  width: 3.750em; }
+#webkite-results a.more-button {
+  background: #1b9cd2; }
+  #webkite-results a.more-button:hover {
     background: #0073a7; }
 #webkite-results a.less-button {
   background: rgba(0, 0, 0, 0.6); }

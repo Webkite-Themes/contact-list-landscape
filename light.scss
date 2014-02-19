@@ -140,7 +140,7 @@ $mainGutter: 1.25em;
       opacity: .5;
       position: absolute;
       right: $mainGutter/2;
-      top:12%;
+      top:10%;
       pointer-events: none;
       }
     }
@@ -193,7 +193,6 @@ $mainGutter: 1.25em;
     color: $lightOpacity;
     font-size: 0.875em;
     font-weight: 700;
-    padding: $mainGutter/4 0 $mainGutter/4 $mainGutter/4;
     line-height: 2em;
     padding: 0 $mainGutter/4 0 $mainGutter/4;
     height: 2em;
@@ -360,17 +359,23 @@ $mainGutter: 1.25em;
     position: relative;
     @include breakThat;
     }
-  a.more-button{
-    background: $linkColor;
+  a.more-button, a.less-button{
+    @include boxedUp;
+    @include roundedUp(.188em);
     color: white;
     display: inline-block;
+    float: right;
+    font: 400 .75em/1 "Open Sans";
     padding: $mainGutter/4 $mainGutter/2;
-    margin-bottom: $mainGutter;
-    @include roundedUp(.188em);
+    margin-top: $mainGutter;
+    text-align: center;
+    width: 3.750em;
+    }
+  a.more-button{
+    background: $linkColor;
     &:hover{background: $linkHover;}
     }
   a.less-button{
-    @extend a.more-button;
     background: $lightOpacity;
     &:hover{background: $lightOpacity*2;}
     }
