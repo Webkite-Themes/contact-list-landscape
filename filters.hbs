@@ -1,6 +1,8 @@
 <div class="webkite-applied-filters">
     <a class="webkite-toggle" href="#{{this.id}} data-id=""{{this.id}}" data-target=".filter-menu">filters <b>&#10010</b></a>
     <ul class="filter-menu webkite-hide">
+      {{#each filterableFacets}}
+      {{#if (equals this "Department")}}
       <li><a href="#">Department</a>
         <ul class="filter-menu-child">
       		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Customer" data-operator="is">Customer</a></li>
@@ -10,6 +12,8 @@
       		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Sales" data-operator="is">Sales</a></li>
       	</ul>
     	</li>
+      {{/if}}
+      {{#if (equals this "Degree")}}
     	<li><a href="#">Degree</a>
       <ul class="filter-menu-child">
       		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Biochemistry" data-operator="is">Biochemistry</a></li>
@@ -26,11 +30,38 @@
       		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Psychology" data-operator="is">Psychology</a></li>
       	</ul>
     	</li>
+      {{/if}}
+      {{#if (equals this "Employer")}}
     	<li><a href="#">Employer</a>
     	<ul class="filter-menu-child">
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="WebKite" data-operator="is">WebKite</a></li>
+        <li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="WebKite" data-operator="is">WebKite</a></li>
+        </li>
     	</ul>
     	</li>
+      {{/if}}
+      {{#if (equals this "University")}}
+      <li><a href="#">University</a>
+        <ul class="filter-menu-child">
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Bloomsburg University" data-operator="is">Bloomsburg University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="California University of Pennsylvania" data-operator="is">California University of Pennsylvania</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Carnegie Mellon University" data-operator="is">Carnegie Mellon University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Clarion University of Pennsylvania" data-operator="is">Clarion University of Pennsylvania</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Cornell University" data-operator="is">Cornell University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Duquesne University" data-operator="is">Duquesne University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Georgia Institute of Technology" data-operator="is">Georgia Institute of Technology</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="John Carroll University" data-operator="is">John Carroll University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Michigan State" data-operator="is">Michigan State</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet=" Penn State" data-operator="is">Penn State</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Rochester Institute of Technology" data-operator="is">Rochester Institute of Technology</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Stanford University" data-operator="is">Stanford University</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Chicago" data-operator="is">University of Chicago</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Miami" data-operator="is">University of Miami</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Pittsburgh" data-operator="is">University of Pittsburgh</a></li>
+        </ul>
+      </li>
+      {{/if}}
+      {{/each}}
     </ul>
   <div class="current-filters">
   {{#each filterGroups}}

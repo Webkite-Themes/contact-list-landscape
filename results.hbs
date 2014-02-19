@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {{ log this}}
+=======
+<div class="webkite-title-area"><h1>Contact List Landscape Card</h1></div>
+>>>>>>> 0a7284f1c82a8dcb42768335d4a52418c0b38543
 <header class="webkite-results-header">
   <div class="webkite-sort-area">{{>sorts this.sort}}</div>
   <div class="webkite-filter-area">{{>filters this.filters}}</div>
@@ -52,15 +56,23 @@
         </li>
         <li>
           <b>university</b>
-          {{#each (facets parent="University")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="University"}}
+          {{#if filterable}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
+          {{/facet}}
         </li>
         <li>
           <b>degree</b>
-          {{#each (facets parent="Degree")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Degree"}}
+          {{#if filterable}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
+          {{/facet}}
         </li>
         <li>
           <b>year of graduation</b>
@@ -70,15 +82,23 @@
         </li>
         <li>
           <b>employer</b>
-          {{#each (facets parent="Employer")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Employer"}}
+          {{#if filterable}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
+          {{/facet}}
         </li>
         <li>
           <b>department</b>
-          {{#each (facets parent="Department")}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-          {{/each}}
+          {{#facet name="Department"}}
+          {{#if filterable}}
+          <a href="#" class="webkite-add-filter" data-facet="{{text}}" data-operator="is">{{displayValue}}</a>
+          {{else}}
+          {{displayValue}}
+          {{/if}}
+          {{/facet}}
         </li>
         <li>
           <b>job title</b>
