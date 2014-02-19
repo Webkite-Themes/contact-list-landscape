@@ -16,7 +16,7 @@
 	<div class="webkite-block sixty">
   	<ul>
   	  <li>
-  	    <b>Home Address</b>
+  	    <b>address</b>
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
         {{#facet name="Address 1"}}{{displayValue}}<br>{{/facet}}
         {{#facet name="Address 2"}}{{displayValue}}<br>{{/facet}}
@@ -24,54 +24,76 @@
         {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         </a>
       </li>
-      <li>{{#facet name="Email"}}
-  	    <b>{{name}}</b>
+      <li>
+        <b>email</b>
+        {{#facet name="Email"}}
         <a href="mailto:{{displayValue}}">{{displayValue}}</a>
-      </li>{{/facet}}
-      <li>{{#facet name="Phone Number"}}
-  	    <b>{{name}}</b>
+        {{/facet}}
+      </li>
+      <li>
+        <b>phone number</b>
+        {{#facet name="Phone Number"}}
         <a href="tel:{{displayValue}}">{{displayValue}}</a>
-      </li>{{/facet}}
+        {{/facet}}
+      </li>
   	</ul>
   	<div id="{{this.id}}" class="webkite-item-details">
     	<ul>
         <li>
-        {{#facet name="Website"}}
-          <b>{{name}}</b>
+          <b>website</b>
+          {{#facet name="Website"}}
           <a href="{{displayValue}}">{{displayValue}}</a>
-        {{/facet}}
+          {{/facet}}
         </li>
         <li>
-        {{#facet name="Twitter"}}
-          <b>{{name}}</b>
+          <b>twitter</b>
+          {{#facet name="Twitter"}}
           <a href="https://twitter.com/{{displayValue}}">{{displayValue}}</a>
-        {{/facet}}
+          {{/facet}}
         </li>
         <li>
-        {{#each (facets parent="University")}}
-          <b>University</b>
+          <b>university</b>
+          {{#each (facets parent="University")}}
           <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-        {{/each}}
+          {{/each}}
         </li>
         <li>
-        {{#each (facets parent="Degree")}}
-          <b>Degree</b>
+          <b>degree</b>
+          {{#each (facets parent="Degree")}}
           <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
-        {{/each}}
+          {{/each}}
         </li>
         <li>
-        {{#facet name="Year of Graduation"}}
-          <b>{{name}}</b>
+          <b>year of graduation</b>
+          {{#facet name="Year of Graduation"}}
           {{displayValue}}
-        {{/facet}}
+          {{/facet}}
+        </li>
+        <li>
+          <b>employer</b>
+          {{#each (facets parent="Employer")}}
+          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
+          {{/each}}
+        </li>
+        <li>
+          <b>department</b>
+          {{#each (facets parent="Department")}}
+          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is">{{name}}</a>
+          {{/each}}
+        </li>
+        <li>
+          <b>job title</b>
+          {{#facet name="Job Title"}}
+          {{displayValue}}
+          {{/facet}}
         </li>
 
       </ul>
   	</div><!-- webkite-item-details -->
 	</div><!--webkite-block sixty-->
   <footer class="webkite-result-footer">
-    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
-  <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler webkite-hide less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
   </footer>
 </section>
 {{/each}}
