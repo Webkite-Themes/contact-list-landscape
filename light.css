@@ -58,6 +58,11 @@
   color: rgba(0, 0, 0, 0.9);
   margin-bottom: 0.625em; }
 #webkite-results h2 {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  display: inline-block;
   font: 700 1.5em/1 "Open Sans";
   color: rgba(0, 0, 0, 0.7); }
 #webkite-results p, #webkite-results li {

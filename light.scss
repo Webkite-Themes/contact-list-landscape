@@ -34,6 +34,12 @@ $mainGutter: 1.25em;
   -moz-box-shadow: 0 .125em .313em $shadowOpacity;
   box-shadow: 0 .125em .313em $shadowOpacity;
   }
+@mixin hyphenGreat{
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  }
 @mixin breakThat{
   &:after{
     content: '';
@@ -78,6 +84,8 @@ $mainGutter: 1.25em;
     margin-bottom: $mainGutter/2;
     }
   h2{
+    @include hyphenGreat;
+    display: inline-block;
     font: 700 1.5em/1 "Open Sans";
     color: $medOpacity;
     }
