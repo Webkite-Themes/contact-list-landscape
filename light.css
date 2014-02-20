@@ -87,7 +87,7 @@
     display: inline-block;
     vertical-align: top; }
   #webkite-results .webkite-results-header .webkite-branding-area a, #webkite-results .webkite-results-footer .webkite-branding-area a {
-    background: url("branding.svg") center top no-repeat;
+    background: url("branding-light.svg") center top no-repeat;
     display: inline-block;
     height: 2.813em;
     width: 8.5em; }
@@ -205,7 +205,12 @@
     float: left;
     font-size: 0.875em;
     line-height: 1em;
-    padding: 0.0625em 0.3125em; }
+    overflow: hidden;
+    max-width: 6.25em;
+    padding: 0.0625em 0.3125em;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
     #webkite-results a.webkite-remove-filter:hover {
       text-decoration: line-through; }
   #webkite-results .filter-group-0 a.webkite-remove-filter {
@@ -219,18 +224,7 @@
   #webkite-results .filter-group-4 a.webkite-remove-filter {
     background: #6f7ca8; }
   #webkite-results a.webkite-clear-filters {
-    background: #1b9cd2;
-    color: white;
-    font-size: .5em;
-    font-weight: 700;
-    line-height: 1.7em;
-    vertical-align: text-top;
-    padding: .125em .65em .375em .65em;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%; }
+    display: inline-block; }
 
 /**************************************** FILTER DROPDOWN */
 #webkite-results .filter-menu {

@@ -108,7 +108,7 @@ $mainGutter: 1.25em;
       }
     /* light theme only */
     .webkite-branding-area a {
-      background: url("branding.svg") center top no-repeat;
+      background: url("branding-light.svg") center top no-repeat;
       display: inline-block;
       height: 2.813em;
       width: 8.5em;
@@ -212,14 +212,19 @@ $mainGutter: 1.25em;
     opacity: .5;
     pointer-events: none;
     }
-  /* tokens */
+   /* tokens */
   a.webkite-remove-filter{
     @include roundedUp (.188em);
     color: white;
     float:left;
     font-size: 0.875em;
     line-height: 1em;
+    overflow: hidden;
+    max-width: 6.25em;
     padding: $mainGutter/20 $mainGutter/4;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &:hover{text-decoration: line-through;}
     }
   .filter-group-0 a.webkite-remove-filter{
@@ -237,16 +242,9 @@ $mainGutter: 1.25em;
   .filter-group-4 a.webkite-remove-filter{
     background: $tokenFifth;
     }
-  /* clear everything */ 
+   /* clear everything */ 
   a.webkite-clear-filters{
-    background: $linkColor;
-    color: white;
-    font-size: .5em;
-    font-weight: 700;
-    line-height: 1.7em;
-    vertical-align: text-top;
-    padding: .125em .65em .375em .65em;
-    @include roundedUp (50%);
+    display: inline-block;
     }
   
   }
