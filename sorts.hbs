@@ -1,9 +1,6 @@
-<div class="webkite-sort">
-  <select class="webkite-sort">
-    {{! log currentSort}}
-    <option {{#unless currentSort}}selected=""{{/unless}}value="" role="label" class="first">no sort</option>
-    {{#each sortableFacets}}
-    <option value="{{this}}" {{#if (equals this ../currentSort)}}selected=""{{/if}}>{{this}}</option>
-    {{/each}}
-  </select>
-</div>
+<a class="webkite-toggle" href="#{{this.id}}" data-id="{{this.id}}" data-target=".sort-menu">sort<i></i></a>
+<ul class="sort-menu webkite-menu webkite-hide">
+  {{#each sortableFacets}}
+	<li class="webkite-apply-sort"><a href="#" class="{{#if (equals this ../currentSort)}}active{{/if}}" data-id="{{this.id}}"  data-sort="{{this}}">{{this}}</a></li>
+	{{/each}}
+</ul>
