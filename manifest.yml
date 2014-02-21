@@ -1,5 +1,11 @@
 images:
-  - branding.svg
+  - angle-light.svg
+  - angle-dark.svg
+  - plus-light.svg
+  - plus-dark.svg
+  - branding-light.svg
+  - branding-dark.svg
+  - clear-all-icon.svg
 
 stylesheets:
   - light.css
