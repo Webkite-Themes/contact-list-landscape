@@ -354,6 +354,12 @@ $mainGutter: 1.25em;
     em{font-style: italic;}
     a{font-size: 1.2em; line-height: 0;}
     }
+  .first-result-page, .previous-result-page{
+    padding-right: $mainGutter/2;
+    }
+  .next-result-page, .last-result-page{
+    padding-left: $mainGutter/2;
+    }
   /* page input */
   input.webkite-page-input{
     @include roundedUp(.188em);

@@ -331,6 +331,10 @@
     #webkite-results .webkite-results-paginator a {
       font-size: 1.2em;
       line-height: 0; }
+  #webkite-results .first-result-page, #webkite-results .previous-result-page {
+    padding-right: 0.625em; }
+  #webkite-results .next-result-page, #webkite-results .last-result-page {
+    padding-left: 0.625em; }
   #webkite-results input.webkite-page-input {
     -webkit-border-radius: 0.188em;
     -moz-border-radius: 0.188em;
