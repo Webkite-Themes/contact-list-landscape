@@ -57,7 +57,9 @@
           <b>university</b>
           {{#facet name="University"}}
           {{#if filterable}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is" data-value="{{text}}">{{displayValue}}</a>
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          {{/each}}
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -67,7 +69,9 @@
           <b>degree</b>
           {{#facet name="Degree"}}
           {{#if filterable}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is" data-value="{{text}}">{{displayValue}}</a>
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          {{/each}}
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -83,7 +87,9 @@
           <b>employer</b>
           {{#facet name="Employer"}}
           {{#if filterable}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is" data-value="{{text}}">{{displayValue}}</a>
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          {{/each}}
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -93,7 +99,9 @@
           <b>department</b>
           {{#facet name="Department"}}
           {{#if filterable}}
-          <a href="#" class="webkite-add-filter" data-facet="{{name}}" data-operator="is" data-value="{{text}}">{{displayValue}}</a>
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          {{/each}}
           {{else}}
           {{displayValue}}
           {{/if}}
