@@ -5,7 +5,7 @@
       <li><a href="#">{{name}}</a>
         <ul class="filter-menu-child">
           {{#each values}}
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="{{../name}}" data-operator="like" data-value="{{this}}">{{this}}</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
           {{/each}}
         </ul>
       </li>
