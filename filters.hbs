@@ -1,73 +1,21 @@
 <div class="webkite-applied-filters">
     <a class="webkite-toggle" href="#{{this.id}}" data-id="{{this.id}}" data-target=".filter-menu">filters<i></i></a>
     <ul class="filter-menu webkite-hide webkite-menu">
-      {{#each filterableFacets}}
-      {{#if (equals this "Department")}}
-      <li><a href="#">Department</a>
+      {{#each filterableFacets type="enum"}}
+      <li><a href="#">{{name}}</a>
         <ul class="filter-menu-child">
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Customer" data-operator="is">Customer</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Development" data-operator="is">Development</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Executive" data-operator="is">Executive</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Office" data-operator="is">Office</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Sales" data-operator="is">Sales</a></li>
-      	</ul>
-    	</li>
-      {{/if}}
-      {{#if (equals this "Degree")}}
-    	<li><a href="#">Degree</a>
-      <ul class="filter-menu-child">
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Biochemistry" data-operator="is">Biochemistry</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Business" data-operator="is">Business</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Computer Science" data-operator="is">Computer Science</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Engineering" data-operator="is">Engineering</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Engligh" data-operator="is">English</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Geology" data-operator="is">Geology</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Graphic Design" data-operator="is">Graphic Design</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Information Science" data-operator="is">Information Science</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Interaction Design" data-operator="is">Interaction Design</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Mathematics" data-operator="is">Mathematics</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Philosophy" data-operator="is">Philosophy</a></li>
-      		<li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Psychology" data-operator="is">Psychology</a></li>
-      	</ul>
-    	</li>
-      {{/if}}
-      {{#if false}}
-    	<li><a href="#">Employer</a>
-    	<ul class="filter-menu-child">
-        <li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="WebKite" data-operator="is">WebKite</a></li>
-        </li>
-    	</ul>
-    	</li>
-      {{/if}}
-      {{#if (equals this "University")}}
-      <li><a href="#">University</a>
-        <ul class="filter-menu-child">
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Bloomsburg University" data-operator="is">Bloomsburg University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="California University of Pennsylvania" data-operator="is">California University of Pennsylvania</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Carnegie Mellon University" data-operator="is">Carnegie Mellon University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Clarion University of Pennsylvania" data-operator="is">Clarion University of Pennsylvania</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Cornell University" data-operator="is">Cornell University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Duquesne University" data-operator="is">Duquesne University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Georgia Institute of Technology" data-operator="is">Georgia Institute of Technology</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="John Carroll University" data-operator="is">John Carroll University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Michigan State" data-operator="is">Michigan State</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet=" Penn State" data-operator="is">Penn State</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Rochester Institute of Technology" data-operator="is">Rochester Institute of Technology</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="Stanford University" data-operator="is">Stanford University</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Chicago" data-operator="is">University of Chicago</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Miami" data-operator="is">University of Miami</a></li>
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="University of Pittsburgh" data-operator="is">University of Pittsburgh</a></li>
+          {{#each values}}
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="{{../name}}" data-operator="like" data-value="{{this}}">{{this}}</a></li>
+          {{/each}}
         </ul>
       </li>
-      {{/if}}
       {{/each}}
     </ul>
   <div class="current-filters">
   {{#each filterGroups}}
   <div class="filter-group-{{@index}}">
     {{#each filters}}
-      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.facet}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
+      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
     {{/each}}      
   </div>
   <span>{{#unless @last}} & {{/unless}}</span>
