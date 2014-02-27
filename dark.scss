@@ -237,11 +237,6 @@ $mainGutter: 1.25em;
       pointer-events: none;
       }
     } 
-  .webkite-applied-filters > a b{
-    font-size: .8em;
-    opacity: .5;
-    pointer-events: none;
-    }
   /* tokens */
   a.webkite-remove-filter{
     @include roundedUp (.188em);
