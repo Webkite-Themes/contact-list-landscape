@@ -7,13 +7,9 @@
 {{#each this.items}}
 <section class="webkite-result">
 	<div class="webkite-block forty">
-	  <img src="{{#facet name="Image"}}{{displayValue}}{{/facet}}"/>
-	  <h2>
-	    {{#facet name="First Name"}}{{displayValue}}{{/facet}} 
-	   </h2>
-	   <h2>
-  	   {{#facet name="Last Name"}}{{displayValue}}{{/facet}}
-	   </h2>
+	  {{#facet name="Image"}}<img src="{{displayValue}}"/>{{/facet}}
+	  {{#facet name="First Name"}}<h2>{{displayValue}} </h2>{{/facet}} 
+	   {{#facet name="Last Name"}}<h2>{{displayValue}}</h2>{{/facet}}
 	</div><!--webkite-block-forty-->
 	<div class="webkite-block sixty">
   	<ul>
