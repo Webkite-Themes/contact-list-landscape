@@ -19,12 +19,14 @@
   	<ul>
   	  <li>
   	    <b>address</b>
+  	    <span class="facet-values">
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
         {{#facet name="Address 1"}}{{displayValue}}<br>{{/facet}}
         {{#facet name="Address 2"}}{{displayValue}}<br>{{/facet}}
         {{#facet name="City"}}{{displayValue}}{{/facet}}, {{#facet name="State"}}{{displayValue}}{{/facet}}
         {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         </a>
+  	    </span>
       </li>
       <li>
         <b>email</b>
@@ -35,7 +37,9 @@
       <li>
         <b>phone number</b>
         {{#facet name="Phone Number"}}
+        <span class="facet-values">
         <a href="tel:{{displayValue}}">{{displayValue}}</a>
+        </span>
         {{/facet}}
       </li>
   	</ul>
@@ -44,22 +48,28 @@
         <li>
           <b>website</b>
           {{#facet name="Website"}}
+          <span class="facet-values">
           <a href="{{displayValue}}">{{displayValue}}</a>
+          </span>
           {{/facet}}
         </li>
         <li>
           <b>twitter</b>
           {{#facet name="Twitter"}}
+          <span class="facet-values">
           <a href="https://twitter.com/{{displayValue}}">{{displayValue}}</a>
+          </span>
           {{/facet}}
         </li>
         <li>
           <b>university</b>
           {{#facet name="University"}}
           {{#if filterable}}
+          <span class="facet-values">
           {{#each values}}
-          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
           {{/each}}
+          </span>
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -69,9 +79,11 @@
           <b>degree</b>
           {{#facet name="Degree"}}
           {{#if filterable}}
+          <span class="facet-values">
           {{#each values}}
-          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
           {{/each}}
+          </span>
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -80,16 +92,20 @@
         <li>
           <b>year of graduation</b>
           {{#facet name="Year of Graduation"}}
+          <span class="facet-values">
           {{displayValue}}
+          </span>
           {{/facet}}
         </li>
         <li>
           <b>employer</b>
           {{#facet name="Employer"}}
           {{#if filterable}}
+          <span class="facet-values">
           {{#each values}}
-          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
           {{/each}}
+          </span>
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -99,9 +115,11 @@
           <b>department</b>
           {{#facet name="Department"}}
           {{#if filterable}}
+          <span class="facet-values">
           {{#each values}}
-          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
           {{/each}}
+          </span>
           {{else}}
           {{displayValue}}
           {{/if}}
@@ -110,7 +128,9 @@
         <li>
           <b>job title</b>
           {{#facet name="Job Title"}}
+          <span class="facet-values">
           {{displayValue}}
+          </span>
           {{/facet}}
         </li>
       </ul>
