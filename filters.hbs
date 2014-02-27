@@ -2,7 +2,7 @@
     <a class="webkite-toggle" href="#{{this.id}}" data-id="{{this.id}}" data-target=".filter-menu">filters<i></i></a>
     <ul class="filter-menu webkite-hide webkite-menu">
       {{#each filterableFacets type="enum"}}
-      <li><a href="#">{{name}}</a>
+      <li><span class="webkite-link">{{name}}</span>
         <ul class="filter-menu-child">
           {{#each values}}
           <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".filter-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>

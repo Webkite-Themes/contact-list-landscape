@@ -302,7 +302,8 @@ $mainGutter: 1.25em;
     list-style-type: none;
     position: relative;
     }
-  .filter-menu li a{
+  .filter-menu li .webkite-link, .filter-menu li a{
+    color: $linkColor;
     display: block;
     padding: $mainGutter/8 $mainGutter/2;
     white-space: pre;
@@ -311,7 +312,7 @@ $mainGutter: 1.25em;
       color: white;
       }
     }
-  .filter-menu > li > a{
+  .filter-menu > li > .webkite-link{
       padding-right: $mainGutter;
       position: relative;
       &:after{
