@@ -21,8 +21,8 @@
   	    <b>address</b>
   	    <span class="facet-values">
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
-        {{#facet name="Address 1"}}{{displayValue}}<br>{{/facet}}
-        {{#facet name="Address 2"}}{{displayValue}}<br>{{/facet}}
+        {{#facet name="Address 1"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
+        {{#facet name="Address 2"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
         {{#facet name="City"}}{{displayValue}}{{/facet}}, {{#facet name="State"}}{{displayValue}}{{/facet}}
         {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         </a>
