@@ -9,6 +9,7 @@ images:
 
 stylesheets:
   - light.css
+  - dark.css
 
 templates:
   - results.handlebars.js
