@@ -19,7 +19,19 @@
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
         {{#facet name="Address 1"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
         {{#facet name="Address 2"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
-        {{#facet name="City"}}{{displayValue}}{{/facet}}, {{#facet name="State"}}{{displayValue}}{{/facet}}
+        {{#facet name="City"}}
+          {{#with ..}}
+            {{#if displayValue}}{{displayValue}}
+              {{#facet name="State"}}
+                {{#if displayValue}}, {{displayValue}}{{/if}}
+              {{/facet}}
+            {{else}}
+              {{#facet name="State"}}
+                {{displayValue}}
+              {{/facet}}
+            {{/if}}
+          {{/with}}
+        {{/facet}}{{#facet name="State"}}{{displayValue}}{{/facet}}
         {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         </a>
   	    </span>
