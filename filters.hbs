@@ -15,10 +15,10 @@
   {{#each filterGroups}}
   <div class="filter-group-{{@index}}">
     {{#each filters}}
-      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}<!-- <b>x</b> --></a> <span>{{#unless @last}} or {{/unless}}</span>
+      <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}</a>{{#unless @last}}<span>or</span>{{/unless}}
     {{/each}}      
   </div>
-  <span>{{#unless @last}} & {{/unless}}</span>
+  {{#unless @last}}<span>&</span>{{/unless}}
 {{/each}}
   <a href="#" class="webkite-clear-filters"></a>
   </div>
