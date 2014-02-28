@@ -202,7 +202,7 @@ $mainGutter: 1.25em;
     padding: $mainGutter/4;
     padding-left: 5.2em;
     width: 100%;
-    text-align: end;
+    text-align: right;
     /* and & or */
     span{
       color: $lightOpacity/2;
@@ -250,6 +250,7 @@ $mainGutter: 1.25em;
     text-align: left;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-wrap: normal;
     &:hover{text-decoration: line-through;}
     }
   .filter-group-0 a.webkite-remove-filter{

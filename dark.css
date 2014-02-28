@@ -180,7 +180,7 @@
     padding: 0.3125em;
     padding-left: 5.2em;
     width: 100%;
-    text-align: end;
+    text-align: right;
     /* and & or */ }
     #webkite-results .current-filters span {
       color: rgba(127, 127, 127, 0.7);
@@ -232,7 +232,8 @@
     padding: 0.0625em 0.3125em;
     text-align: left;
     text-overflow: ellipsis;
-    white-space: nowrap; }
+    white-space: nowrap;
+    word-wrap: normal; }
     #webkite-results a.webkite-remove-filter:hover {
       text-decoration: line-through; }
   #webkite-results .filter-group-0 a.webkite-remove-filter {
