@@ -173,6 +173,23 @@ $mainGutter: 1.25em;
       color: white;
       } 
     }
+    /* directional arrow */
+  .sort-menu li.active a{
+    position: relative;
+    padding-right: $mainGutter*1.5;
+    &.asc:after, &.desc:after{
+      background: url("sort-direction.png") no-repeat;
+      content: "";
+      display: block;
+      height: 5px;
+      width: 10px;
+      position: absolute;
+      top: $mainGutter/2;
+      right: $mainGutter/2;
+      }
+    &.asc:after{background-position-y: 0;}
+    &.desc:after{background-position-y: -5px;}
+    }
   
   }
 

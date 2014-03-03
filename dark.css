@@ -119,35 +119,53 @@
   z-index: 3; }
 
 /********************************************* SORT MENU */
-#webkite-results .sort-menu {
-  margin: 0;
-  -webkit-border-radius: 0.375em;
-  -moz-border-radius: 0.375em;
-  -ms-border-radius: 0.375em;
-  -o-border-radius: 0.375em;
-  border-radius: 0.375em;
-  -webkit-box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
-  -webkit-padding-start: 0;
-  -moz-padding-start: 0;
-  background: white;
-  font-size: .875em;
-  padding: 0.625em 0;
-  position: absolute;
-  z-index: 4;
-  top: 0.625em;
-  left: 0.625em; }
-#webkite-results .sort-menu li {
-  list-style-type: none;
-  position: relative; }
-#webkite-results .sort-menu li a {
-  display: block;
-  padding: 0.15625em 0.625em;
-  white-space: pre; }
-  #webkite-results .sort-menu li a:hover {
-    background: #1b9cd2;
-    color: white; }
+#webkite-results {
+  /* directional arrow */ }
+  #webkite-results .sort-menu {
+    margin: 0;
+    -webkit-border-radius: 0.375em;
+    -moz-border-radius: 0.375em;
+    -ms-border-radius: 0.375em;
+    -o-border-radius: 0.375em;
+    border-radius: 0.375em;
+    -webkit-box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.2);
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    background: white;
+    font-size: .875em;
+    padding: 0.625em 0;
+    position: absolute;
+    z-index: 4;
+    top: 0.625em;
+    left: 0.625em; }
+  #webkite-results .sort-menu li {
+    list-style-type: none;
+    position: relative; }
+  #webkite-results .sort-menu li a {
+    display: block;
+    padding: 0.15625em 0.625em;
+    white-space: pre; }
+    #webkite-results .sort-menu li a:hover {
+      background: #1b9cd2;
+      color: white; }
+  #webkite-results .sort-menu li.active a {
+    position: relative;
+    padding-right: 1.875em; }
+    #webkite-results .sort-menu li.active a.asc:after, #webkite-results .sort-menu li.active a.desc:after {
+      background: url("sort-direction.png") no-repeat;
+      content: "";
+      display: block;
+      height: 5px;
+      width: 10px;
+      position: absolute;
+      top: 0.625em;
+      right: 0.625em; }
+    #webkite-results .sort-menu li.active a.asc:after {
+      background-position-y: 0; }
+    #webkite-results .sort-menu li.active a.desc:after {
+      background-position-y: -5px; }
 
 /************************************************ FILTERS */
 #webkite-results {

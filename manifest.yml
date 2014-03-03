@@ -6,6 +6,7 @@ images:
   - branding-light.svg
   - branding-dark.svg
   - clear-all-icon.png
+  - sort-direction.png
 
 stylesheets:
   - light.css
