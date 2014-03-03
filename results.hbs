@@ -4,6 +4,7 @@
   <div class="webkite-filter-area">{{>filters this.filters}}</div>
 </header>
 
+{{#if items.length}}
 {{#each this.items}}
 <section class="webkite-result">
 	<div class="webkite-block forty">
@@ -17,22 +18,6 @@
   	    <b>address</b>
   	    <span class="facet-values">
         <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
-        {{#facet name="Address 1"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
-        {{#facet name="Address 2"}}{{#if displayValue}}{{displayValue}}<br>{{/if}}{{/facet}}
-        {{#facet name="City"}}
-          {{#with ..}}
-            {{#if displayValue}}{{displayValue}}
-              {{#facet name="State"}}
-                {{#if displayValue}}, {{displayValue}}{{/if}}
-              {{/facet}}
-            {{else}}
-              {{#facet name="State"}}
-                {{displayValue}}
-              {{/facet}}
-            {{/if}}
-          {{/with}}
-        {{/facet}}{{#facet name="State"}}{{displayValue}}{{/facet}}
-        {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}
         {{#facet name="Address 1"}}<span>{{displayValue}}</span>{{/facet}}
           {{#facet name="Address 2"}}<span>{{displayValue}}</span>{{/facet}}
           {{#facet name="City"}}<span><span class="city">{{displayValue}}</span>{{/facet}}<span class="state">{{#facet name="State"}}{{displayValue}}</span>{{/facet}}
@@ -199,6 +184,13 @@
   <footer class="webkite-result-footer"></footer>
 </section>
 {{/each}}
+{{else}}
+<section class="webkite-no-results">
+  <h2>sorry, no results</h2>
+  <p>There are no results to display. Try removing a filter to see more results.</p>
+  <footer class="webkite-result-footer"></footer>
+</section>
+{{/if}}
 
 <footer class="webkite-results-footer">
   <div class="webkite-branding-area"><a href="http://webkite.com"></a></div>

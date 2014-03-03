@@ -528,6 +528,14 @@ $mainGutter: 1.25em;
   
 }
 
+/******************************************* NO RESULTS */
+#webkite-results{
+  
+  .webkite-no-results{
+    padding: $mainGutter 0;
+    }
+
+  }
   
 /************************************** ELEMENT QUERIES */
 #webkite-results.xs{
