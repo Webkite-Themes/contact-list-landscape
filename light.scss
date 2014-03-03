@@ -534,6 +534,9 @@ $mainGutter: 1.25em;
   
   .webkite-no-results{
     padding: $mainGutter 0;
+    h2{
+      margin-bottom: $mainGutter;
+      }
     }
 
   }

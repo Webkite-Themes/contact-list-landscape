@@ -522,6 +522,8 @@
 /******************************************* NO RESULTS */
 #webkite-results .webkite-no-results {
   padding: 1.25em 0; }
+  #webkite-results .webkite-no-results h2 {
+    margin-bottom: 1.25em; }
 
 /************************************** ELEMENT QUERIES */
 #webkite-results.xs .webkite-block, #webkite-results.xs .webkite-title-area, #webkite-results.xs .webkite-branding-area, #webkite-results.xs .webkite-pagination-area {
