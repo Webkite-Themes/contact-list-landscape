@@ -63,7 +63,7 @@
         <li>
           {{#facet name="University"}}
             {{#if filterable}}
-            <b>
+            <b class="inline-filter-button">
             <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
             <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
               {{#each filterableValues}}
@@ -88,7 +88,7 @@
         <li>
           {{#facet name="Degree"}}
           {{#if filterable}}
-          <b>
+          <b class="inline-filter-button">
             <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
             <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
               {{#each filterableValues}}
@@ -121,7 +121,7 @@
         <li>
           {{#facet name="Employer"}}
           {{#if filterable}}
-          <b>
+          <b class="inline-filter-button">
             <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
             <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
               {{#each filterableValues}}
@@ -146,7 +146,7 @@
         <li>
           {{#facet name="Department"}}
           {{#if filterable}}
-          <b>
+          <b class="inline-filter-button">
             <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
             <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
               {{#each filterableValues}}
@@ -186,7 +186,9 @@
 {{/each}}
 {{else}}
 <section class="webkite-no-results">
-  <h2>Sorry, no results</h2>
+  <h2>Sorry, nh2{
+      margin-bottom: $mainGutter;
+      }o results</h2>
   <p>There are no results to display based on the selected filters. Try removing a filter to see more results.</p>
   <footer class="webkite-result-footer"></footer>
 </section>

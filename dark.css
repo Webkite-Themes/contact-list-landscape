@@ -458,6 +458,8 @@
 /************************************** INLINE FILTERS */
 #webkite-results .webkite-block li b, #webkite-results .webkite-block ul li span.facet-values {
   position: relative; }
+  #webkite-results .webkite-block li b.inline-filter-button + .facet-values, #webkite-results .webkite-block ul li span.inline-filter-button.facet-values + .facet-values {
+    padding-top: 0.3125em; }
   #webkite-results .webkite-block li b > .webkite-toggle, #webkite-results .webkite-block ul li span.facet-values > .webkite-toggle {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

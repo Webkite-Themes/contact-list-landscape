@@ -473,6 +473,7 @@ $mainGutter: 1.25em;
 
   .webkite-block li b{
     position: relative;
+    &.inline-filter-button + .facet-values{padding-top: $mainGutter/4;}
     > .webkite-toggle{
       @include boxedUp;
       @include roundedUp(.188em);
