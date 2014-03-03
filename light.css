@@ -376,6 +376,10 @@
       #webkite-results .webkite-block ul li span.facet-values {
         width: 59%;
         font-weight: 400; }
+      #webkite-results .webkite-block ul li .city, #webkite-results .webkite-block ul li .state {
+        display: inline; }
+      #webkite-results .webkite-block ul li .city + .state:before {
+        content: ", "; }
   #webkite-results .webkite-block img {
     max-width: 100%;
     height: auto;
