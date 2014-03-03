@@ -243,7 +243,7 @@ $mainGutter: 1.25em;
     left: 0;
     @include boxedUp;
     @include roundedUp(.188em 0 0 .188em);
-    background: $lightestOpacity;
+    background: rgba(0, 0, 0, 0.85);
     border: 1px solid $lightestOpacity;
     border-right: 1px solid $lighterOpacity;
     color: $lightOpacity;
@@ -253,7 +253,7 @@ $mainGutter: 1.25em;
     padding: 0 $mainGutter/2;
     height: 2em;
     i{
-      background: url("plus-light.png") no-repeat;
+      background: url("plus-dark.png") no-repeat;
       display: inline-block;
       height: 12px;
       width: 12px;

@@ -219,7 +219,7 @@
     -ms-border-radius: 0.188em 0 0 0.188em;
     -o-border-radius: 0.188em 0 0 0.188em;
     border-radius: 0.188em 0 0 0.188em;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
@@ -229,7 +229,7 @@
     padding: 0 0.625em;
     height: 2em; }
     #webkite-results .webkite-applied-filters > a i {
-      background: url("plus-light.png") no-repeat;
+      background: url("plus-dark.png") no-repeat;
       display: inline-block;
       height: 12px;
       width: 12px;
