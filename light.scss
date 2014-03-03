@@ -40,6 +40,13 @@ $mainGutter: 1.25em;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   }
+@mixin ellipsisThis{
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
 @mixin breakThat{
   &:after{
     content: '';
@@ -216,17 +223,17 @@ $mainGutter: 1.25em;
     border: 1px solid $lighterOpacity;
     display: inline-block;
     height: 1.75em;
-    padding: $mainGutter/4;
-    padding-left: 5.2em;
+    overflow: hidden;
+    padding: $mainGutter/4 1.563em $mainGutter/4 4.688em;
     width: 100%;
-    text-align: right;
+    text-align: left;
     /* and & or */
     span{
       color: $lightOpacity;
-      float: left;
       font-size: .875em;
       line-height: 1.2em;
       margin: 0 $mainGutter/4;
+      vertical-align: top;
       }
     }
   .webkite-applied-filters > a{
@@ -253,22 +260,25 @@ $mainGutter: 1.25em;
       margin-left: $mainGutter/2;
       pointer-events: none;
       }
-    } 
+    }
+  .filter-token-wrapper{
+    @include ellipsisThis;
+    }
   /* tokens */
   a.webkite-remove-filter{
+    @include ellipsisThis;
     @include roundedUp (.188em);
     color: white;
-    float:left;
     font-size: 0.875em;
     line-height: 1em;
-    overflow: hidden;
     max-width: 6.25em;
     padding: $mainGutter/20 $mainGutter/4;
     text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     word-wrap: normal;
     &:hover{text-decoration: line-through;}
+    }
+  [class^="filter-group"]{
+    display: inline-block;
     }
   .filter-group-0 a.webkite-remove-filter{
     background: $tokenFirst;
@@ -292,6 +302,9 @@ $mainGutter: 1.25em;
     height: 18px;
     width: 18px;
     margin-top: -1px;
+    position: absolute;
+    right: .325em;
+    top:.375em;
     &:active{
       background-position-y: -18px;
       }
@@ -299,6 +312,7 @@ $mainGutter: 1.25em;
   
   
   }
+
 /**************************************** FILTER DROPDOWN */
 #webkite-results{
 

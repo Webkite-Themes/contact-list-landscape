@@ -195,17 +195,17 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: inline-block;
     height: 1.75em;
-    padding: 0.3125em;
-    padding-left: 5.2em;
+    overflow: hidden;
+    padding: 0.3125em 1.563em 0.3125em 4.688em;
     width: 100%;
-    text-align: right;
+    text-align: left;
     /* and & or */ }
     #webkite-results .current-filters span {
-      color: rgba(127, 127, 127, 0.7);
-      float: left;
+      color: rgba(255, 255, 255, 0.7);
       font-size: .875em;
       line-height: 1.2em;
-      margin: 0 0.3125em; }
+      margin: 0 0.3125em;
+      vertical-align: top; }
   #webkite-results .webkite-applied-filters > a {
     display: inline-block;
     position: absolute;
@@ -219,7 +219,7 @@
     -ms-border-radius: 0.188em 0 0 0.188em;
     -o-border-radius: 0.188em 0 0 0.188em;
     border-radius: 0.188em 0 0 0.188em;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
@@ -229,31 +229,40 @@
     padding: 0 0.625em;
     height: 2em; }
     #webkite-results .webkite-applied-filters > a i {
-      background: url("plus-dark.png") no-repeat;
+      background: url("plus-light.png") no-repeat;
       display: inline-block;
       height: 12px;
       width: 12px;
       margin-left: 0.625em;
       pointer-events: none; }
+  #webkite-results .filter-token-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
   #webkite-results a.webkite-remove-filter {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     -webkit-border-radius: 0.188em;
     -moz-border-radius: 0.188em;
     -ms-border-radius: 0.188em;
     -o-border-radius: 0.188em;
     border-radius: 0.188em;
     color: white;
-    float: left;
     font-size: 0.875em;
     line-height: 1em;
-    overflow: hidden;
     max-width: 6.25em;
     padding: 0.0625em 0.3125em;
     text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     word-wrap: normal; }
     #webkite-results a.webkite-remove-filter:hover {
       text-decoration: line-through; }
+  #webkite-results [class^="filter-group"] {
+    display: inline-block; }
   #webkite-results .filter-group-0 a.webkite-remove-filter {
     background: #1b9cd2; }
   #webkite-results .filter-group-1 a.webkite-remove-filter {
@@ -269,7 +278,10 @@
     display: inline-block;
     height: 18px;
     width: 18px;
-    margin-top: -1px; }
+    margin-top: -1px;
+    position: absolute;
+    right: .325em;
+    top: .375em; }
     #webkite-results a.webkite-clear-filters:active {
       background-position-y: -18px; }
 
