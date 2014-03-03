@@ -450,6 +450,66 @@ $mainGutter: 1.25em;
   
   }
   
+/************************************** INLINE FILTERS */
+#webkite-results{
+
+  .webkite-block li b{
+    position: relative;
+    > .webkite-toggle{
+      @include boxedUp;
+      @include roundedUp(.188em);
+      border: 1px solid transparent;
+      color: $lightOpacity;
+      cursor: pointer;
+      display: inline-block;
+      font: 700 1em/1.3 "Open Sans";
+      margin: 0;
+      padding: $mainGutter/4 $mainGutter/4;
+      height: 2em;
+      margin-left: -$mainGutter/4;
+      i{
+        background: url("angle-light.png") center center no-repeat;
+        display: inline-block;
+        height: 10px;
+        margin-left: $mainGutter/2;
+        pointer-events: none;
+        width: 10px;
+        }
+      &:hover{
+        border: 1px solid $lighterOpacity;
+        background: $lightestOpacity;
+        }
+      }
+    }
+  .webkite-block .inline-filter-menu{
+    @include roundedUp(.375em);
+    @include shadowHere;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    position: absolute; 
+    background: white;
+    padding: $mainGutter/2 0;
+    top: $mainGutter/2;
+    left: $mainGutter/2;
+    margin: 0;
+    z-index: 2;
+    li {
+      padding-bottom: 0;
+      a{
+        color: $linkColor;
+        display: block;
+        font-size: .875em;
+        font-weight: 400;
+        max-width: 100%;
+        padding: $mainGutter/8 $mainGutter/2;
+        white-space: pre;
+        &:hover{background: $linkColor;color: white;}
+        }
+      }
+    }
+  
+}
+  
 /************************************** ELEMENT QUERIES */
 #webkite-results.xs{
   .webkite-block,.webkite-title-area, .webkite-branding-area, .webkite-pagination-area{
@@ -470,6 +530,11 @@ $mainGutter: 1.25em;
     }
   .webkite-block ul li{
     b, a, span{width: 100%;}
+    .webkite-toggle{width: auto;}
+    }
+  .webkite-block .inline-filter-menu li a{
+    max-width: 100%;
+    width: auto;
     }
   .webkite-title-area, .webkite-branding-area, .webkite-pagination-area{
     text-align: center;
@@ -497,5 +562,6 @@ $mainGutter: 1.25em;
     }
   .webkite-block ul li{
     b, a, span{width: 100%;}
+    .webkite-toggle{width: auto;}
     }
   }
