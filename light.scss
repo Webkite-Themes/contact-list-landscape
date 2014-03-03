@@ -345,6 +345,8 @@ $mainGutter: 1.25em;
       }
     }
   .filter-menu > li > .webkite-link{
+      color: $linkColor;
+      cursor: pointer;
       padding-right: $mainGutter;
       position: relative;
       &:after{

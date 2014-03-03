@@ -201,7 +201,7 @@
     text-align: left;
     /* and & or */ }
     #webkite-results .current-filters span {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(127, 127, 127, 0.7);
       font-size: .875em;
       line-height: 1.2em;
       margin: 0 0.15625em;
@@ -316,6 +316,8 @@
     background: #1b9cd2;
     color: white; }
 #webkite-results .filter-menu > li > .webkite-link {
+  color: #1b9cd2;
+  cursor: pointer;
   padding-right: 1.25em;
   position: relative; }
   #webkite-results .filter-menu > li > .webkite-link:after {
