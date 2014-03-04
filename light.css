@@ -166,9 +166,9 @@
       top: 0.625em;
       right: 0.625em; }
     #webkite-results .sort-menu li.active a.asc:after {
-      background-position-y: 0; }
+      background-position: 0 0; }
     #webkite-results .sort-menu li.active a.desc:after {
-      background-position-y: -5px; }
+      background-position: 0 -5px; }
 
 /************************************************ FILTERS */
 #webkite-results {
@@ -289,7 +289,7 @@
     right: .325em;
     top: .375em; }
     #webkite-results a.webkite-clear-filters:active {
-      background-position-y: -18px; }
+      background-position: 0 -18px; }
 
 /**************************************** FILTER DROPDOWN */
 #webkite-results .filter-menu {

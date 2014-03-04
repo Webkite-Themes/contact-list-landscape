@@ -197,8 +197,8 @@ $mainGutter: 1.25em;
       top: $mainGutter/2;
       right: $mainGutter/2;
       }
-    &.asc:after{background-position-y: 0;}
-    &.desc:after{background-position-y: -5px;}
+    &.asc:after{background-position: 0 0;}
+    &.desc:after{background-position: 0 -5px;}
     }
   
   }
@@ -311,7 +311,7 @@ $mainGutter: 1.25em;
     right: .325em;
     top:.375em;
     &:active{
-      background-position-y: -18px;
+      background-position: 0 -18px;
       }
     }
    
