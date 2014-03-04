@@ -124,17 +124,20 @@ $mainGutter: 1.25em;
 /************************************************* SORTS */
 #webkite-results{
 
-  .webkite-sort-area > a.webkite-toggle{
+  .webkite-sort-area > .webkite-toggle{
     @include boxedUp;
     @include roundedUp(.188em);
     background: $lightestOpacity;
     color: $lightOpacity;
+    cursor: pointer;
     display: inline-block;
     border: 1px solid $lighterOpacity;
     font: 700 .875em/1.3 "Open Sans";
     margin: 0;
+    outline: none;
     padding: $mainGutter/4 $mainGutter/2;
     height: 2em;
+    text-align: left;
     i{
       background: url("angle-light.png") center center no-repeat;
       display: inline-block;
@@ -224,7 +227,7 @@ $mainGutter: 1.25em;
     display: inline-block;
     height: 1.75em;
     overflow: hidden;
-    padding: $mainGutter/4 1.563em $mainGutter/4 4.688em;
+    padding: $mainGutter/4 1.563em $mainGutter/4 4.875em;
     width: 100%;
     text-align: left;
     /* and & or */
@@ -232,13 +235,16 @@ $mainGutter: 1.25em;
       color: $lightOpacity;
       font-size: .875em;
       line-height: 1.2em;
-      margin: 0 $mainGutter/8;
+      margin: 0 $mainGutter/3;
       vertical-align: top;
       }
     }
-  .webkite-applied-filters > a{
+  .webkite-applied-filters > .webkite-toggle{
+    cursor: pointer;
     display: inline-block;
     position: absolute;
+    margin: 0;
+    outline: none;
     z-index: 2;
     left: 0;
     @include boxedUp;
@@ -564,10 +570,10 @@ $mainGutter: 1.25em;
     width: 100%;
     padding-right: 0;
     }
-  .webkite-filter-area, .webkite-sort-area, .webkite-sort-area > a{
+  .webkite-filter-area, .webkite-sort-area, .webkite-sort-area > .webkite-toggle{
     width: 100%;
     }
-  .webkite-sort-area > a.webkite-toggle i{
+  .webkite-sort-area > .webkite-toggle i{
     float: right; margin-top: $mainGutter/4;
     }
   .sort-menu{width: 95%;}
@@ -596,10 +602,10 @@ $mainGutter: 1.25em;
   }
   
 #webkite-results.sm{
-.webkite-filter-area, .webkite-sort-area, .webkite-sort-area > a{
+.webkite-filter-area, .webkite-sort-area, .webkite-sort-area > .webkite-toggle{
     width: 100%;
     }
-  .webkite-sort-area > a.webkite-toggle i{
+  .webkite-sort-area > .webkite-toggle i{
     float: right; margin-top: $mainGutter/4;
     }
   .sort-menu{width: 95%;}

@@ -1,6 +1,6 @@
 {{#if sortableFacets.length}}
 <div class="webkite-sort-area">
-  <a class="webkite-toggle" href="#{{this.id}}" data-id="{{this.id}}" data-target=".sort-menu">sort<i></i></a>
+  <button class="webkite-toggle" data-id="{{this.id}}" data-target=".sort-menu">sort<i></i></button>
   <ul class="sort-menu webkite-menu webkite-hide">
     {{#each sortableFacets}}
   	<li class="webkite-apply-sort {{#if (equals this ../currentSort)}}active{{/if}}"><a href="#" class="{{../currentDirection}}" data-id="{{this.id}}"  data-sort="{{this}}">{{this}}</a></li>

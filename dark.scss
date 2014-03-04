@@ -124,17 +124,20 @@ $mainGutter: 1.25em;
 /************************************************* SORTS */
 #webkite-results{
 
-  .webkite-sort-area > a.webkite-toggle{
+  .webkite-sort-area > .webkite-toggle{
     @include boxedUp;
     @include roundedUp(.188em);
     background: $lightestOpacity;
     color: $lightOpacity;
+    cursor: pointer;
     display: inline-block;
     border: 1px solid $lighterOpacity;
     font: 700 .875em/1.3 "Open Sans";
     margin: 0;
+    outline: none;
     padding: $mainGutter/4 $mainGutter/2;
     height: 2em;
+    text-align: left;
     i{
       background: url("angle-dark.png") center center no-repeat;
       display: inline-block;
@@ -236,9 +239,11 @@ $mainGutter: 1.25em;
       vertical-align: top;
       }
     }
-  .webkite-applied-filters > a{
+  .webkite-applied-filters > .webkite-toggle{
+    cursor: pointer;
     display: inline-block;
     position: absolute;
+    margin: 0;
     z-index: 2;
     left: 0;
     @include boxedUp;
@@ -309,8 +314,7 @@ $mainGutter: 1.25em;
       background-position-y: -18px;
       }
     }
-  
-  
+   
   }
 /**************************************** FILTER DROPDOWN */
 #webkite-results{
