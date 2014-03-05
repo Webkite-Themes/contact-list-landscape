@@ -4,7 +4,11 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   border: 0;
   font-size: 100%;
   font: inherit;
+  text-transform: none;
   vertical-align: baseline; }
+button, select, input{
+  text-transform: none;  
+  }
  
 /* HTML5 display-role reset for older browsers */
  
