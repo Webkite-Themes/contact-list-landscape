@@ -252,9 +252,7 @@ $mainGutter: 1.25em;
     border: 1px solid $lightestOpacity;
     border-right: 1px solid $lighterOpacity;
     color: $lightOpacity;
-    font-size: 0.875em;
-    font-weight: 700;
-    line-height: 2em;
+    font: 700 .875em/1em "Open Sans";
     padding: 0 $mainGutter/2;
     height: 2em;
     i{
