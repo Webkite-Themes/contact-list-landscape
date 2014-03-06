@@ -525,6 +525,8 @@
   top: 0.625em;
   left: 0.625em;
   margin: 0;
+  max-height: 12.5em;
+  overflow-y: scroll;
   z-index: 2; }
   #webkite-results .webkite-block .inline-filter-menu li {
     padding-bottom: 0; }

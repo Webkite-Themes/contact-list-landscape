@@ -532,6 +532,8 @@ $mainGutter: 1.25em;
     top: $mainGutter/2;
     left: $mainGutter/2;
     margin: 0;
+    max-height: 12.5em;
+    overflow-y: scroll;
     z-index: 2;
     li {
       padding-bottom: 0;
