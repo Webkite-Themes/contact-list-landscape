@@ -16,17 +16,7 @@
       </ul>
     <div class="current-filters">
       <a href="#" class="webkite-clear-filters"></a>
-      <div class="filter-token-wrapper">
-      {{#each filterGroups}}
-      {{#if @first}}<span>by</span>{{/if}}
-      <div class="filter-group-{{@index}}">
-        {{#each filters}}
-          <a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}</a>{{#unless @last}}<span>or</span>{{/unless}}
-        {{/each}}      
-      </div>
-      {{#unless @last}}<span>and</span>{{/unless}}
-    {{/each}}
-      </div><!-- filter-token-wrapper -->
+      <div class="filter-token-wrapper">{{#each filterGroups}}{{#if @first}}<span>by</span>{{/if}}<div class="filter-group-{{@index}}">{{#each filters}}<a href="#" class="webkite-remove-filter" data-facet="{{this.facet}}" data-operator="{{this.operator}}" data-value="{{this.value}}">{{this.value}}</a>{{#unless @last}}<span>or</span>{{/unless}}{{/each}}</div>{{#unless @last}}<span>and</span>{{/unless}}{{/each}}</div><!-- filter-token-wrapper -->
     </div><!-- current-filters -->
   </div>
 </div><!-- webkite-filter-area -->
