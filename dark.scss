@@ -571,8 +571,10 @@ $mainGutter: 1.25em;
     float: right; margin-top: $mainGutter/4;
     }
   .sort-menu{width: 95%;}
-  .webkite-filter-area{
+  .webkite-sort-area+.webkite-filter-area{
     margin-top: $mainGutter;
+    }
+  .webkite-filter-area{
     margin-left: 0;
     padding-left: 0;
     }
@@ -603,8 +605,10 @@ $mainGutter: 1.25em;
     float: right; margin-top: $mainGutter/4;
     }
   .sort-menu{width: 95%;}
-  .webkite-filter-area{
+  .webkite-sort-area+.webkite-filter-area{
     margin-top: $mainGutter;
+    }
+  .webkite-filter-area{
     margin-left: 0;
     padding-left: 0;
     }

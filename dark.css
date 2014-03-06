@@ -557,8 +557,9 @@
   margin-top: 0.3125em; }
 #webkite-results.xs .sort-menu {
   width: 95%; }
+#webkite-results.xs .webkite-sort-area + .webkite-filter-area {
+  margin-top: 1.25em; }
 #webkite-results.xs .webkite-filter-area {
-  margin-top: 1.25em;
   margin-left: 0;
   padding-left: 0; }
 #webkite-results.xs .webkite-block ul li b, #webkite-results.xs .webkite-block ul li span.facet-values, #webkite-results.xs .webkite-block ul li a, #webkite-results.xs .webkite-block ul li span {
@@ -582,8 +583,9 @@
   margin-top: 0.3125em; }
 #webkite-results.sm .sort-menu {
   width: 95%; }
+#webkite-results.sm .webkite-sort-area + .webkite-filter-area {
+  margin-top: 1.25em; }
 #webkite-results.sm .webkite-filter-area {
-  margin-top: 1.25em;
   margin-left: 0;
   padding-left: 0; }
 #webkite-results.sm .webkite-block ul li b, #webkite-results.sm .webkite-block ul li span.facet-values, #webkite-results.sm .webkite-block ul li a, #webkite-results.sm .webkite-block ul li span {
