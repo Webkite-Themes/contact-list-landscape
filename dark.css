@@ -12,6 +12,9 @@
     vertical-align: baseline; }
   #webkite-results button, #webkite-results select, #webkite-results input {
     text-transform: none; }
+  #webkite-results button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
   #webkite-results article, #webkite-results aside, #webkite-results details, #webkite-results figcaption, #webkite-results figure, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results section {
     display: block; }
   #webkite-results body {

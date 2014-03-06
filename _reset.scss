@@ -9,6 +9,10 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
 button, select, input{
   text-transform: none;  
   }
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+    }
  
 /* HTML5 display-role reset for older browsers */
  

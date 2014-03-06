@@ -2,6 +2,15 @@
 ---
 ##changelog
 
+###0.2.3
+
+* Properly wrapping all facet output in checks
+* Background position standardized for Firefox
+* Margins between filter area and sort area depend on both existing
+* More specific font declarations on buttons
+* Tweaking of filters so that spacing between strings and tokens is more conistent
+* Inline filter menus have a max-height
+
 ###0.2.2
 
 * Added if check against filterableFacets
