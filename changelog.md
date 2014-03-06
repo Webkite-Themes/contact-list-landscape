@@ -1,4 +1,4 @@
-#Contact List Portrait Card
+#Contact List Landscape Card
 ---
 ##changelog
 
