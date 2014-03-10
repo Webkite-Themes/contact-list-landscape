@@ -120,7 +120,8 @@ $mainGutter: 1.25em;
     height: 2.813em;
     }
     
-  } 
+  }
+ 
 /************************************************* SORTS */
 #webkite-results{
 
@@ -153,6 +154,7 @@ $mainGutter: 1.25em;
     }
   
   }
+
 /********************************************* SORT MENU */
 #webkite-results{
 
@@ -203,7 +205,6 @@ $mainGutter: 1.25em;
   
   }
 
-
 /************************************************ FILTERS */
 #webkite-results{
 
@@ -235,7 +236,7 @@ $mainGutter: 1.25em;
       color: $lightOpacity/2;
       font-size: .875em;
       line-height: 1.2em;
-      margin: 0 $mainGutter/8;
+      margin: 0 $mainGutter/3;
       vertical-align: top;
       }
     }
@@ -244,11 +245,12 @@ $mainGutter: 1.25em;
     display: inline-block;
     position: absolute;
     margin: 0;
+    outline: none;
     z-index: 2;
     left: 0;
     @include boxedUp;
     @include roundedUp(.188em 0 0 .188em);
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0,0,0,.85);
     border: 1px solid $lightestOpacity;
     border-right: 1px solid $lighterOpacity;
     color: $lightOpacity;
@@ -312,8 +314,10 @@ $mainGutter: 1.25em;
       background-position: 0 -18px;
       }
     }
-   
+  
+  
   }
+
 /**************************************** FILTER DROPDOWN */
 #webkite-results{
 
@@ -375,6 +379,7 @@ $mainGutter: 1.25em;
     }
   
   }
+
 /********************************************* PAGINATION */
 #webkite-results{
 
