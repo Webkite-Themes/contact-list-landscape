@@ -432,6 +432,7 @@ $mainGutter: 1.25em;
         padding-bottom: $mainGutter/2;
         b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;font-weight: 700;}
         span.facet-values{@extend b; width:59%; font-weight: 400;}
+        .facet-values.address a > span{display: inline-block; width: 100%;}
         .city, .state{display: inline;}
         .city + .state:before{content: ", ";}
         }  
