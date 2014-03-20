@@ -2,6 +2,16 @@
 ---
 ##changelog
 
+###0.2.4
+
+* Disabled styles for pagination once you've reached the end or are at the beginning of a result set
+* No longer displaying pagination if there's only one page of results
+* Including box-shadow removal and background removal in the reset
+* Styles and markup for the filter overview behavior
+* Tweaks between light and dark variants for consistent spacing
+* Fix for bug noticed where sort button did not span the container at sm and xs sizes
+* Making sure addresses have line breaks appropriately
+
 ###0.2.3
 
 * Properly wrapping all facet output in checks
