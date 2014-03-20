@@ -2,7 +2,7 @@
 ---
 ##changelog
 
-###0.2.4
+###0.2.5
 
 * Disabled styles for pagination once you've reached the end or are at the beginning of a result set
 * No longer displaying pagination if there's only one page of results
@@ -11,6 +11,10 @@
 * Tweaks between light and dark variants for consistent spacing
 * Fix for bug noticed where sort button did not span the container at sm and xs sizes
 * Making sure addresses have line breaks appropriately
+
+###0.2.4
+
+* Minor tweaks on filter button
 
 ###0.2.3
 
