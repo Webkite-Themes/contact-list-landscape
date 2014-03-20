@@ -48,12 +48,21 @@ $mainGutter: 1.25em;
   white-space: nowrap;
   }
 @mixin breakThat{
-  &:after{
+  &::after{
     content: '';
     display: inline-block;
     width: 100%;
     height: 0;margin: 0;padding: 0; white-space: pre-line;
     }
+  }
+@mixin gradiateHorizontal{
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 5%, rgba(0,0,0,0.15) 25%, rgba(0,0,0,0.02) 75%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.4)), color-stop(5%,rgba(0,0,0,0.3)), color-stop(25%,rgba(0,0,0,0.15)), color-stop(75%,rgba(0,0,0,0.02)), color-stop(100%,rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.15) 25%,rgba(0,0,0,0.02) 75%,rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.15) 25%,rgba(0,0,0,0.02) 75%,rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.15) 25%,rgba(0,0,0,0.02) 75%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.15) 25%,rgba(0,0,0,0.02) 75%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
   }
   
 @include web-font(("Open+Sans") ("300,400,400i,700,700i"));
@@ -189,7 +198,7 @@ $mainGutter: 1.25em;
   .sort-menu li.active a{
     position: relative;
     padding-right: $mainGutter*1.5;
-    &.asc:after, &.desc:after{
+    &.asc::after, &.desc::after{
       background: url("sort-direction.png") no-repeat;
       content: "";
       display: block;
@@ -199,8 +208,8 @@ $mainGutter: 1.25em;
       top: $mainGutter/2;
       right: $mainGutter/2;
       }
-    &.asc:after{background-position: 0 0;}
-    &.desc:after{background-position: 0 -5px;}
+    &.asc::after{background-position: 0 0;}
+    &.desc::after{background-position: 0 -5px;}
     }
   
   }
@@ -354,7 +363,7 @@ $mainGutter: 1.25em;
       cursor: pointer;
       padding-right: $mainGutter;
       position: relative;
-      &:after{
+      &::after{
         content: "\203A";
         color: $lightOpacity;
         opacity: .5;
@@ -377,6 +386,36 @@ $mainGutter: 1.25em;
     }
   .filter-menu li:hover .filter-menu-child{
     display: block;
+    }
+  
+  }
+
+/******************************* FILTER OVERVIEW AND SHADE */
+#webkite-results{
+  
+  .webkite-truncated::before{
+    content: "";
+    @include gradiateHorizontal;
+    height: 1.6em; width: 1.5em;
+    position: absolute;
+    left: 4.563em;
+    top:1px;
+    }
+  .all-current-filters{
+    @include roundedUp(.188em);
+    @include boxedUp;
+    background: white;
+    border: 1px solid $lighterOpacity;
+    line-height: 1.2em;
+    padding:$mainGutter/3 1.563em $mainGutter/5 $mainGutter/3;
+    position: absolute;
+    top:0;
+    z-index: 3;
+    .all-filters-wrapper{
+      white-space: normal;
+      [class^="filter-group"]{display: inline;}
+      }
+    a.webkite-clear-filters{margin-top: -2px; margin-right: -1px;}
     }
   
   }

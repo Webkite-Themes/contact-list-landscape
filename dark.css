@@ -3,6 +3,10 @@
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
   #webkite-results div, #webkite-results span, #webkite-results applet, #webkite-results object, #webkite-results iframe, #webkite-results h1, #webkite-results h2, #webkite-results h3, #webkite-results h4, #webkite-results h5, #webkite-results h6, #webkite-results p, #webkite-results blockquote, #webkite-results pre, #webkite-results a, #webkite-results abbr, #webkite-results acronym, #webkite-results address, #webkite-results big, #webkite-results cite, #webkite-results code, #webkite-results del, #webkite-results dfn, #webkite-results em, #webkite-results img, #webkite-results ins, #webkite-results kbd, #webkite-results q, #webkite-results s, #webkite-results samp, #webkite-results small, #webkite-results strike, #webkite-results strong, #webkite-results sub, #webkite-results sup, #webkite-results tt, #webkite-results var, #webkite-results b, #webkite-results .webkite-block ul li span.facet-values, #webkite-results u, #webkite-results i, #webkite-results center, #webkite-results dl, #webkite-results dt, #webkite-results dd, #webkite-results ol, #webkite-results ul, #webkite-results li, #webkite-results fieldset, #webkite-results form, #webkite-results label, #webkite-results legend, #webkite-results table, #webkite-results caption, #webkite-results tbody, #webkite-results tfoot, #webkite-results thead, #webkite-results tr, #webkite-results th, #webkite-results td, #webkite-results article, #webkite-results aside, #webkite-results canvas, #webkite-results details, #webkite-results embed, #webkite-results figure, #webkite-results figcaption, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results output, #webkite-results ruby, #webkite-results section, #webkite-results summary, #webkite-results time, #webkite-results mark, #webkite-results audio, #webkite-results video {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background: none;
     margin: 0;
     padding: 0;
     border: 0;
@@ -12,6 +16,10 @@
     vertical-align: baseline; }
   #webkite-results button, #webkite-results select, #webkite-results input {
     text-transform: none; }
+    #webkite-results button:active, #webkite-results select:active, #webkite-results input:active {
+      box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none; }
   #webkite-results button::-moz-focus-inner {
     padding: 0;
     border: 0; }
@@ -76,7 +84,7 @@
   position: relative;
   line-height: 1;
   /* light theme only */ }
-  #webkite-results .webkite-results-header:after, #webkite-results .webkite-results-footer:after {
+  #webkite-results .webkite-results-header::after, #webkite-results .webkite-results-footer::after {
     content: '';
     display: inline-block;
     width: 100%;
@@ -162,7 +170,7 @@
   #webkite-results .sort-menu li.active a {
     position: relative;
     padding-right: 1.875em; }
-    #webkite-results .sort-menu li.active a.asc:after, #webkite-results .sort-menu li.active a.desc:after {
+    #webkite-results .sort-menu li.active a.asc::after, #webkite-results .sort-menu li.active a.desc::after {
       background: url("sort-direction.png") no-repeat;
       content: "";
       display: block;
@@ -171,9 +179,9 @@
       position: absolute;
       top: 0.625em;
       right: 0.625em; }
-    #webkite-results .sort-menu li.active a.asc:after {
+    #webkite-results .sort-menu li.active a.asc::after {
       background-position: 0 0; }
-    #webkite-results .sort-menu li.active a.desc:after {
+    #webkite-results .sort-menu li.active a.desc::after {
       background-position: 0 -5px; }
 
 /************************************************ FILTERS */
@@ -330,7 +338,7 @@
   cursor: pointer;
   padding-right: 1.25em;
   position: relative; }
-  #webkite-results .filter-menu > li > .webkite-link:after {
+  #webkite-results .filter-menu > li > .webkite-link::after {
     content: "\203A";
     color: rgba(127, 127, 127, 0.7);
     opacity: .5;
@@ -356,6 +364,45 @@
   margin: 0; }
 #webkite-results .filter-menu li:hover .filter-menu-child {
   display: block; }
+
+/******************************* FILTER OVERVIEW AND SHADE */
+#webkite-results .webkite-truncated::before {
+  content: "";
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(5%, rgba(0, 0, 0, 0.3)), color-stop(25%, rgba(0, 0, 0, 0.15)), color-stop(75%, rgba(0, 0, 0, 0.02)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
+  height: 1.6em;
+  width: 1.5em;
+  position: absolute;
+  left: 4.563em;
+  top: 1px; }
+#webkite-results .all-current-filters {
+  -webkit-border-radius: 0.188em;
+  -moz-border-radius: 0.188em;
+  -ms-border-radius: 0.188em;
+  -o-border-radius: 0.188em;
+  border-radius: 0.188em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.2em;
+  padding: 0.41667em 1.563em 0.25em 0.41667em;
+  position: absolute;
+  top: 0;
+  z-index: 3; }
+  #webkite-results .all-current-filters .all-filters-wrapper {
+    white-space: normal; }
+    #webkite-results .all-current-filters .all-filters-wrapper [class^="filter-group"] {
+      display: inline; }
+  #webkite-results .all-current-filters a.webkite-clear-filters {
+    margin-top: -2px;
+    margin-right: -1px; }
 
 /********************************************* PAGINATION */
 #webkite-results {
@@ -442,7 +489,7 @@
 #webkite-results .webkite-result {
   text-align: justify;
   position: relative; }
-  #webkite-results .webkite-result:after {
+  #webkite-results .webkite-result::after {
     content: '';
     display: inline-block;
     width: 100%;
