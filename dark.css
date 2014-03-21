@@ -419,8 +419,18 @@
       line-height: 0; }
   #webkite-results .first-result-page, #webkite-results .previous-result-page {
     padding-right: 0.625em; }
+    #webkite-results .first-result-page.disabled, #webkite-results .previous-result-page.disabled {
+      color: rgba(255, 255, 255, 0.7); }
+      #webkite-results .first-result-page.disabled:hover, #webkite-results .previous-result-page.disabled:hover {
+        color: rgba(255, 255, 255, 0.7);
+        cursor: not-allowed; }
   #webkite-results .next-result-page, #webkite-results .last-result-page {
     padding-left: 0.625em; }
+    #webkite-results .next-result-page.disabled, #webkite-results .last-result-page.disabled {
+      color: rgba(255, 255, 255, 0.7); }
+      #webkite-results .next-result-page.disabled:hover, #webkite-results .last-result-page.disabled:hover {
+        color: rgba(255, 255, 255, 0.7);
+        cursor: not-allowed; }
   #webkite-results input.webkite-page-input {
     -webkit-border-radius: 0.188em;
     -moz-border-radius: 0.188em;
