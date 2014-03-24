@@ -82,8 +82,7 @@
 #webkite-results .webkite-results-header, #webkite-results .webkite-results-footer {
   text-align: justify;
   position: relative;
-  line-height: 1;
-  /* light theme only */ }
+  /* dark theme only */ }
   #webkite-results .webkite-results-header::after, #webkite-results .webkite-results-footer::after {
     content: '';
     display: inline-block;
@@ -100,6 +99,8 @@
     display: inline-block;
     height: 2.813em;
     width: 8.5em; }
+#webkite-results .webkite-results-header {
+  line-height: 1; }
 #webkite-results .webkite-results-footer {
   height: 2.813em; }
 
@@ -186,6 +187,12 @@
 
 /************************************************ FILTERS */
 #webkite-results {
+  /*
+.webkite-sort-area + .webkite-filter-area{
+    padding-left: 4.9em;
+    margin-left: -4.9em;
+    }
+*/
   /* tokens */
   /* clear everything */ }
   #webkite-results .webkite-filter-area {
@@ -194,9 +201,6 @@
     box-sizing: border-box;
     width: 100%;
     position: relative; }
-  #webkite-results .webkite-sort-area + .webkite-filter-area {
-    padding-left: 4.9em;
-    margin-left: -4.9em; }
   #webkite-results .webkite-applied-filters {
     position: relative; }
   #webkite-results .current-filters {
@@ -221,7 +225,7 @@
       color: rgba(127, 127, 127, 0.7);
       font-size: .875em;
       line-height: 1.2em;
-      margin: 0 0.41667em;
+      padding: 0 0.41667em;
       vertical-align: top; }
   #webkite-results .webkite-applied-filters > .webkite-toggle {
     cursor: pointer;
@@ -258,7 +262,8 @@
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; }
+    white-space: nowrap;
+    width: 100%; }
   #webkite-results a.webkite-remove-filter {
     display: inline-block;
     max-width: 100%;
@@ -327,6 +332,7 @@
   list-style-type: none;
   position: relative; }
 #webkite-results .filter-menu li .webkite-link, #webkite-results .filter-menu li a {
+  color: #1b9cd2;
   display: block;
   padding: 0.15625em 0.625em;
   white-space: pre; }
@@ -366,7 +372,7 @@
   display: block; }
 
 /******************************* FILTER OVERVIEW AND SHADE */
-#webkite-results .webkite-truncated::before {
+#webkite-results .webkite-truncated:before {
   content: "";
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(5%, rgba(0, 0, 0, 0.3)), color-stop(25%, rgba(0, 0, 0, 0.15)), color-stop(75%, rgba(0, 0, 0, 0.02)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -375,11 +381,12 @@
   background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
-  height: 1.6em;
+  height: auto;
   width: 1.5em;
   position: absolute;
   left: 4.563em;
-  top: 1px; }
+  top: 0;
+  bottom: 2px; }
 #webkite-results .all-current-filters {
   -webkit-border-radius: 0.188em;
   -moz-border-radius: 0.188em;
@@ -408,6 +415,8 @@
 #webkite-results {
   /* page input */
   /* remove arrows */ }
+  #webkite-results .webkite-pagination-area {
+    font: 400 1em/0 "Open Sans"; }
   #webkite-results .webkite-results-paginator {
     font-size: 1em; }
     #webkite-results .webkite-results-paginator a, #webkite-results .webkite-results-paginator p {
