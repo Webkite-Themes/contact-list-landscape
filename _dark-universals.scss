@@ -130,8 +130,8 @@
     border: 1px solid $lighterOpacity;
     display: inline-block;
     height: 1.75em;
-    overflow: hidden;
     padding: $mainGutter/4 1.563em $mainGutter/4 4.563em;
+    position: relative;
     width: 100%;
     text-align: left;
     /* and & or */
@@ -293,9 +293,9 @@
     @include gradiateHorizontal;
     height: auto; width: 1.5em;
     position: absolute;
-    left: 4.563em;
+    left: 4.5em;
     top:0;
-    bottom:2px;
+    bottom:0;
     }
   .all-current-filters{
     @include roundedUp(.188em);
