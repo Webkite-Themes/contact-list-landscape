@@ -31,7 +31,7 @@
     display: block; }
   #webkite-results body {
     line-height: 1; }
-  #webkite-results ol, #webkite-results ul {
+  #webkite-results ol, #webkite-results ul, #webkite-results ul li {
     list-style: none; }
   #webkite-results blockquote, #webkite-results q {
     quotes: none; }
