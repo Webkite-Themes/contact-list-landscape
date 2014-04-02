@@ -494,6 +494,12 @@
         display: inline; }
       #webkite-results .webkite-block ul li .city + .state:before {
         content: ", "; }
+    #webkite-results .webkite-block ul a.webkite-website {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
   #webkite-results .webkite-block .image-wrapper {
     width: 100%; }
   #webkite-results .webkite-block img {

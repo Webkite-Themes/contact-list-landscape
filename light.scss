@@ -74,7 +74,8 @@ $mainGutter: 1.25em;
         .facet-values.address a > span{display: inline-block; width: 100%;}
         .city, .state{display: inline;}
         .city + .state:before{content: ", ";}
-        }  
+        }
+       a.webkite-website{@include ellipsisThis;}  
       }
     .image-wrapper{width: 100%;}
     img {
