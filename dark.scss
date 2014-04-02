@@ -68,8 +68,9 @@ $mainGutter: 1.25em;
         list-style-type: none;
         text-align: justify;
         padding-bottom: $mainGutter/2;
-        b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;font-weight: 700;}
-        span.facet-values{@extend b; width:59%; font-weight: 400;}
+        b, span.facet-values{display: inline-block; text-align: left; vertical-align: text-top;}
+        b{width: 39%; font-weight: 700;}
+        span.facet-values{width:59%; font-weight: 400;}
         .facet-values.address a > span{display: inline-block; width: 100%;}
         .city, .state{display: inline;}
         .city + .state:before{content: ", ";}

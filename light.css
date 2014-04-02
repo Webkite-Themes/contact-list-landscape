@@ -2,7 +2,7 @@
 /* RESET */
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
-  #webkite-results div, #webkite-results span, #webkite-results applet, #webkite-results object, #webkite-results iframe, #webkite-results h1, #webkite-results h2, #webkite-results h3, #webkite-results h4, #webkite-results h5, #webkite-results h6, #webkite-results p, #webkite-results blockquote, #webkite-results pre, #webkite-results a, #webkite-results abbr, #webkite-results acronym, #webkite-results address, #webkite-results big, #webkite-results cite, #webkite-results code, #webkite-results del, #webkite-results dfn, #webkite-results em, #webkite-results img, #webkite-results ins, #webkite-results kbd, #webkite-results q, #webkite-results s, #webkite-results samp, #webkite-results small, #webkite-results strike, #webkite-results strong, #webkite-results sub, #webkite-results sup, #webkite-results tt, #webkite-results var, #webkite-results b, #webkite-results #webkite-results .webkite-block ul li span.facet-values, #webkite-results .webkite-block ul li #webkite-results span.facet-values, #webkite-results u, #webkite-results i, #webkite-results center, #webkite-results dl, #webkite-results dt, #webkite-results dd, #webkite-results ol, #webkite-results ul, #webkite-results li, #webkite-results fieldset, #webkite-results form, #webkite-results label, #webkite-results legend, #webkite-results table, #webkite-results caption, #webkite-results tbody, #webkite-results tfoot, #webkite-results thead, #webkite-results tr, #webkite-results th, #webkite-results td, #webkite-results article, #webkite-results aside, #webkite-results canvas, #webkite-results details, #webkite-results embed, #webkite-results figure, #webkite-results figcaption, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results output, #webkite-results ruby, #webkite-results section, #webkite-results summary, #webkite-results time, #webkite-results mark, #webkite-results audio, #webkite-results video {
+  #webkite-results div, #webkite-results span, #webkite-results applet, #webkite-results object, #webkite-results iframe, #webkite-results h1, #webkite-results h2, #webkite-results h3, #webkite-results h4, #webkite-results h5, #webkite-results h6, #webkite-results p, #webkite-results blockquote, #webkite-results pre, #webkite-results a, #webkite-results abbr, #webkite-results acronym, #webkite-results address, #webkite-results big, #webkite-results cite, #webkite-results code, #webkite-results del, #webkite-results dfn, #webkite-results em, #webkite-results img, #webkite-results ins, #webkite-results kbd, #webkite-results q, #webkite-results s, #webkite-results samp, #webkite-results small, #webkite-results strike, #webkite-results strong, #webkite-results sub, #webkite-results sup, #webkite-results tt, #webkite-results var, #webkite-results b, #webkite-results u, #webkite-results i, #webkite-results center, #webkite-results dl, #webkite-results dt, #webkite-results dd, #webkite-results ol, #webkite-results ul, #webkite-results li, #webkite-results fieldset, #webkite-results form, #webkite-results label, #webkite-results legend, #webkite-results table, #webkite-results caption, #webkite-results tbody, #webkite-results tfoot, #webkite-results thead, #webkite-results tr, #webkite-results th, #webkite-results td, #webkite-results article, #webkite-results aside, #webkite-results canvas, #webkite-results details, #webkite-results embed, #webkite-results figure, #webkite-results figcaption, #webkite-results footer, #webkite-results header, #webkite-results hgroup, #webkite-results menu, #webkite-results nav, #webkite-results output, #webkite-results ruby, #webkite-results section, #webkite-results summary, #webkite-results time, #webkite-results mark, #webkite-results audio, #webkite-results video {
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -477,11 +477,12 @@
       list-style-type: none;
       text-align: justify;
       padding-bottom: 0.625em; }
-      #webkite-results .webkite-block ul li b, #webkite-results .webkite-block ul li #webkite-results .webkite-block ul li span.facet-values, #webkite-results .webkite-block ul li #webkite-results .webkite-block ul li span.facet-values {
+      #webkite-results .webkite-block ul li b, #webkite-results .webkite-block ul li span.facet-values {
         display: inline-block;
         text-align: left;
+        vertical-align: text-top; }
+      #webkite-results .webkite-block ul li b {
         width: 39%;
-        vertical-align: text-top;
         font-weight: 700; }
       #webkite-results .webkite-block ul li span.facet-values {
         width: 59%;
@@ -555,7 +556,7 @@
   text-align: right; }
 
 /************************************** INLINE FILTERS */
-#webkite-results .webkite-block li b, #webkite-results .webkite-block li #webkite-results .webkite-block ul li span.facet-values, #webkite-results .webkite-block ul li #webkite-results .webkite-block li span.facet-values {
+#webkite-results .webkite-block li b {
   position: relative; }
   #webkite-results .webkite-block li b.inline-filter-button + .facet-values {
     padding-top: 0.3125em; }
@@ -643,7 +644,7 @@
 #webkite-results.xs .webkite-filter-area {
   margin-left: 0;
   padding-left: 0; }
-#webkite-results.xs .webkite-block ul li b, #webkite-results.xs .webkite-block ul li #webkite-results .webkite-block ul li span.facet-values, #webkite-results .webkite-block ul li #webkite-results.xs .webkite-block ul li span.facet-values, #webkite-results.xs .webkite-block ul li a, #webkite-results.xs .webkite-block ul li span {
+#webkite-results.xs .webkite-block ul li b, #webkite-results.xs .webkite-block ul li a, #webkite-results.xs .webkite-block ul li span {
   width: 100%; }
 #webkite-results.xs .webkite-block ul li .webkite-toggle {
   width: auto; }
@@ -669,7 +670,7 @@
 #webkite-results.sm .webkite-filter-area {
   margin-left: 0;
   padding-left: 0; }
-#webkite-results.sm .webkite-block ul li b, #webkite-results.sm .webkite-block ul li #webkite-results .webkite-block ul li span.facet-values, #webkite-results .webkite-block ul li #webkite-results.sm .webkite-block ul li span.facet-values, #webkite-results.sm .webkite-block ul li a, #webkite-results.sm .webkite-block ul li span {
+#webkite-results.sm .webkite-block ul li b, #webkite-results.sm .webkite-block ul li a, #webkite-results.sm .webkite-block ul li span {
   width: 100%; }
 #webkite-results.sm .webkite-block ul li .webkite-toggle {
   width: auto; }
