@@ -88,8 +88,7 @@
 /******************************************** NAVIGATIONALS */
 #webkite-results .webkite-results-header, #webkite-results .webkite-results-footer {
   text-align: justify;
-  position: relative;
-  /* light theme only */ }
+  position: relative; }
   #webkite-results .webkite-results-header::after, #webkite-results .webkite-results-footer::after {
     content: '';
     display: inline-block;
@@ -233,6 +232,7 @@
       padding: 0 0.41667em;
       vertical-align: top; }
   #webkite-results .webkite-applied-filters > .webkite-toggle {
+    background: rgba(0, 0, 0, 0.05);
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -248,7 +248,6 @@
     -ms-border-radius: 0.188em 0 0 0.188em;
     -o-border-radius: 0.188em 0 0 0.188em;
     border-radius: 0.188em 0 0 0.188em;
-    background: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.6);
@@ -349,8 +348,8 @@
   padding-right: 1.25em;
   position: relative; }
   #webkite-results .filter-menu > li > .webkite-link::after {
-    content: "\203A";
     color: rgba(0, 0, 0, 0.6);
+    content: "\203A";
     opacity: 0.5;
     position: absolute;
     right: 0.41667em; }
@@ -370,7 +369,7 @@
   background: white;
   padding: 0.625em 0;
   left: 100%;
-  top: 0;
+  top: -0.625em;
   margin: 0; }
 #webkite-results .filter-menu li:hover .filter-menu-child {
   display: block; }
@@ -436,14 +435,14 @@
       color: rgba(0, 0, 0, 0.6); }
       #webkite-results .first-result-page.disabled:hover, #webkite-results .previous-result-page.disabled:hover {
         color: rgba(0, 0, 0, 0.6);
-        cursor: not-allowed; }
+        cursor: default; }
   #webkite-results .next-result-page, #webkite-results .last-result-page {
     padding-left: 0.625em; }
     #webkite-results .next-result-page.disabled, #webkite-results .last-result-page.disabled {
       color: rgba(0, 0, 0, 0.6); }
       #webkite-results .next-result-page.disabled:hover, #webkite-results .last-result-page.disabled:hover {
         color: rgba(0, 0, 0, 0.6);
-        cursor: not-allowed; }
+        cursor: default; }
   #webkite-results input.webkite-page-input {
     -webkit-border-radius: 0.188em;
     -moz-border-radius: 0.188em;
@@ -451,10 +450,10 @@
     -o-border-radius: 0.188em;
     border-radius: 0.188em;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.6);
     padding: 0.3125em;
     max-width: 1.5em;
-    font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.6); }
+    font-size: 0.9em; }
   #webkite-results .webkite-page-input::-webkit-outer-spin-button, #webkite-results .webkite-page-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }

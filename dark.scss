@@ -1,17 +1,13 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700");
 
-//COLOR PALETTE
-@import 'dark-palette';
+$colorVariant:dark;
 
-//SIZES
-$mainGutter: 1.25em;
+//CALL UNIVERSALS
+@import 'universals';
 
-//MIXINS
-@import 'mixins';
-  
 /* RESET */
 #webkite-results{
-  @import 'reset';
+  @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
@@ -49,7 +45,7 @@ $mainGutter: 1.25em;
   }
 
 //*******************************************UNIVERSALS
-@import 'dark-universals';
+@include universalStyles;
   
 /********************************************** BLOCKS */
 #webkite-results{
