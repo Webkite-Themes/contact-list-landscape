@@ -96,6 +96,8 @@ $tokenFifth: #6f7ca8;
   left: $position;
   }
 @mixin gradiateHorizontal{
+	@if $colorVariant == light{background: url("gradient-fallback-light.png") repeat-y;}
+	@if $colorVariant == dark{background: url("gradient-fallback-dark.png") repeat-y;}  
   background: -moz-linear-gradient(left,  $stepOne 0%, $stepTwo 5%, $stepThree 25%, $stepFour 75%, $stepFive 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,$stepOne), color-stop(5%,$stepTwo), color-stop(25%,$stepThree), color-stop(75%,$stepFour), color-stop(100%,$stepFive));
   background: -webkit-linear-gradient(left,  $stepOne 0%,$stepTwo 5%,$stepThree 25%,$stepFour 75%,$stepFive 100%);

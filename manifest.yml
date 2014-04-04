@@ -7,6 +7,8 @@ images:
   - branding-dark.svg
   - clear-all-icon.png
   - sort-direction.png
+  - gradient-fallback-light.png
+  - gradient-fallback-dark.png
 
 stylesheets:
   - light.css
