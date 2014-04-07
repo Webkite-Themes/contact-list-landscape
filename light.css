@@ -133,7 +133,7 @@
   height: 2em;
   text-align: left; }
   #webkite-results .webkite-sort-area > .webkite-toggle i {
-    background: url("angle-light.png") center center no-repeat;
+    background: url("angle-light.svg") center center no-repeat;
     display: inline-block;
     height: 10px;
     margin-left: 0.625em;
@@ -585,7 +585,7 @@
     height: 2em;
     margin-left: -0.3125em; }
     #webkite-results .webkite-block li b > .webkite-toggle i {
-      background: url("angle-light.png") center center no-repeat;
+      background: url("angle-light.svg") center center no-repeat;
       display: inline-block;
       height: 10px;
       margin-left: 0.625em;
