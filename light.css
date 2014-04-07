@@ -575,7 +575,7 @@
     -ms-border-radius: 0.188em;
     -o-border-radius: 0.188em;
     border-radius: 0.188em;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     display: inline-block;

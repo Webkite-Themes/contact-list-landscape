@@ -137,7 +137,7 @@ $colorVariant:light;
     > .webkite-toggle{
       @include boxedUp;
       @include roundedUp(.188em);
-      border: 1px solid transparent;
+      border: 1px solid $lighterOpacity;
       color: $lightOpacity;
       cursor: pointer;
       display: inline-block;
