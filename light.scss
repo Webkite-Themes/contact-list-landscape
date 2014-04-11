@@ -19,6 +19,7 @@ $colorVariant:light;
   padding: $mainGutter;
   font-family:"Open Sans";
   font-size: 16px;
+  font: 400 16px/normal "Open Sans";
   a{color:$linkColor;
       text-decoration: none; 
     &:hover{color: $linkHover;}

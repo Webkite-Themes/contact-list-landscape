@@ -61,7 +61,8 @@
   margin: 0 auto;
   padding: 1.25em;
   font-family: "Open Sans";
-  font-size: 16px; }
+  font-size: 16px;
+  font: 400 16px/normal "Open Sans"; }
   #webkite-results a {
     color: #1b9cd2;
     text-decoration: none; }
