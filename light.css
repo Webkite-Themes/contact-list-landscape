@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 /* RESET */
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
@@ -61,7 +61,8 @@
   margin: 0 auto;
   padding: 1.25em;
   font-family: "Open Sans";
-  font-size: 16px; }
+  font-size: 16px;
+  font: 400 16px/normal "Open Sans"; }
   #webkite-results a {
     color: #1b9cd2;
     text-decoration: none; }
