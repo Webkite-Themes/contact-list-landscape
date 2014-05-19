@@ -7,43 +7,43 @@
 {{#if items.length}}
 {{#each this.items}}
 <section class="webkite-result">
-	<div class="webkite-block forty">
-	  {{#facet name="Image"}}<div class="image-wrapper"><img src="{{displayValue}}"/></div>{{/facet}}
-	  {{#facet name="First Name"}}<h2>{{displayValue}} </h2>{{/facet}} 
-	   {{#facet name="Last Name"}}<h2>{{displayValue}}</h2>{{/facet}}
-	</div><!--webkite-block-forty-->
-	<div class="webkite-block sixty">
-  	<ul>
-  	  <li>
-  	    <b>address</b>
-  	    <span class="facet-values address">
-        <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
-        {{#facet name="Address 1"}}<span>{{displayValue}}</span>{{/facet}}
-          {{#facet name="Address 2"}}<span>{{displayValue}}</span>{{/facet}}
-          <span>{{#facet name="City"}}<span class="city">{{displayValue}}</span>{{/facet}}{{#facet name="State"}}<span class="state">{{displayValue}}</span>{{/facet}}
-          {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}</span>
-        </a>
-  	    </span>
+  <div class="webkite-block forty">
+    {{#facet name="Image"}}<div class="image-wrapper"><img src="{{displayValue}}"/></div>{{/facet}}
+    {{#facet name="First Name"}}<h2>{{displayValue}} </h2>{{/facet}} 
+     {{#facet name="Last Name"}}<h2>{{displayValue}}</h2>{{/facet}}
+  </div><!--webkite-block-forty-->
+  <div class="webkite-block sixty">
+    <ul>
+      <li>
+        <b>address</b>
+        <span class="facet-values address">
+          <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
+            {{#facet name="Address 1"}}<span>{{displayValue}}</span>{{/facet}}
+            {{#facet name="Address 2"}}<span>{{displayValue}}</span>{{/facet}}
+            <span>
+              {{~#facet name="City"}}<span class="city">{{displayValue}}</span>{{/facet}}
+              {{~#facet name="State"}}<span class="state">{{displayValue}}</span>{{/facet}}
+              {{~#facet name="Zip Code"}}{{displayValue}}{{/facet~}}
+            </span>
+            {{~#facet name="Country"}}<span>{{displayValue}}</span>{{/facet}}
+          </a>
+        </span>
       </li>
       <li>
         <b>email</b>
         {{#facet name="Email"}}
-        <span class="facet-values">
-        <a href="mailto:{{displayValue}}">{{displayValue}}</a>
-        </span>
+          <span class="facet-values"><a href="mailto:{{displayValue}}">{{displayValue}}</a></span>
         {{/facet}}
       </li>
       <li>
         <b>phone number</b>
         {{#facet name="Phone Number"}}
-        <span class="facet-values">
-        <a href="tel:{{displayValue}}">{{displayValue}}</a>
-        </span>
+          <span class="facet-values"><a href="tel:{{displayValue}}">{{displayValue}}</a></span>
         {{/facet}}
       </li>
-  	</ul>
-  	<div id="{{this.id}}" class="webkite-item-details">
-    	<ul>
+    </ul>
+    <div id="{{this.id}}" class="webkite-item-details">
+      <ul>
         <li>
           <b>website</b>
           {{#facet name="Website"}}
@@ -185,10 +185,10 @@
           {{/facet}}
         </li>
       </ul>
-  	</div><!-- webkite-item-details -->
-  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
-  	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
-	</div><!--webkite-block sixty-->
+    </div><!-- webkite-item-details -->
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
+  </div><!--webkite-block sixty-->
   <footer class="webkite-result-footer"></footer>
 </section>
 {{/each}}
