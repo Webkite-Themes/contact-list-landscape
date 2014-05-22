@@ -453,12 +453,16 @@
     border-radius: 0.188em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.6);
+    -moz-appearance: textfield;
     padding: 0.3125em;
     max-width: 1.5em;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    text-align: center; }
   #webkite-results .webkite-page-input::-webkit-outer-spin-button, #webkite-results .webkite-page-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+  #webkite-results input[type=number] {
+    -moz-appearance: textfield; }
 
 /********************************************** BLOCKS */
 #webkite-results .webkite-block {
