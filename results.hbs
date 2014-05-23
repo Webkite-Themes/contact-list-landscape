@@ -1,6 +1,6 @@
 {{ log this}}
 <header class="webkite-results-header">
-  {{>sorts this.sort}}
+  {{>sorts this.sort~}}
   {{>filters this.filters}}
 </header>
 
@@ -196,7 +196,6 @@
 <section class="webkite-no-results">
   <h2>Sorry, no results</h2>
   <p>There are no results to display based on the selected filters. Try removing a filter to see more results.</p>
-  <footer class="webkite-result-footer"></footer>
 </section>
 {{/if}}
 
