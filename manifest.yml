@@ -1,29 +1,34 @@
-images:
-  - angle-light.png
-  - angle-dark.png
-  - plus-light.png
-  - plus-dark.png
-  - branding-light.svg
-  - branding-dark.svg
-  - clear-all-icon.png
-  - sort-direction.png
-  - gradient-fallback-light.png
-  - gradient-fallback-dark.png
+theme:
+  name: contact-list-landscape
+  
+settings:
+  pagination:
+    - 10
+    - 25
+    - 50
+    - 100
 
-stylesheets:
-  - light.css
-  - dark.css
-
-templates:
-  - results.handlebars.js
-
-partials:
-  - paginator.handlebars.js
-  - filters.handlebars.js
-  - sorts.handlebars.js
-
-pagination:
-  - 10
-  - 25
-  - 50
-  - 100
+assets:
+  images:
+    - angle-light.png
+    - angle-dark.png
+    - plus-light.png
+    - plus-dark.png
+    - branding-light.svg
+    - branding-dark.svg
+    - clear-all-icon.png
+    - sort-direction.png
+    - gradient-fallback-light.png
+    - gradient-fallback-dark.png
+  
+  stylesheets:
+    - light.css
+    - dark.css
+  
+  templates:
+    - results.handlebars.js
+  
+  partials:
+    - paginator.handlebars.js
+    - filters.handlebars.js
+    - sorts.handlebars.js
