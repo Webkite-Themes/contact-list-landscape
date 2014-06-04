@@ -98,8 +98,8 @@
     background: url("branding-light.svg") center top no-repeat;
     background-size: 100%;
     display: inline-block;
-    height: 2.813em;
-    width: 8.5em; }
+    height: 34px;
+    width: 102px; }
 #webkite-results .webkite-results-header {
   line-height: 1;
   margin-bottom: 20px; }
@@ -108,7 +108,8 @@
     clear: both;
     display: table; }
 #webkite-results .webkite-results-footer {
-  height: 2.813em; }
+  height: 34px;
+  font-size: 14px; }
   #webkite-results .webkite-results-footer::after {
     content: '';
     display: inline-block;
@@ -441,9 +442,9 @@
   /* page input */
   /* remove arrows */ }
   #webkite-results .webkite-pagination-area {
-    font: 400 1.2em/0 'Open Sans', 'Arial', sans-serif; }
+    font: 400 14px/0 'Open Sans', 'Arial', sans-serif; }
   #webkite-results .webkite-results-paginator {
-    font-size: 1em; }
+    font-size: 14px; }
     #webkite-results .webkite-results-paginator a, #webkite-results .webkite-results-paginator p {
       display: inline; }
     #webkite-results .webkite-results-paginator em {
@@ -504,7 +505,7 @@
 #webkite-results.xs .webkite-branding-area {
   padding-bottom: 20px; }
 #webkite-results.xs .webkite-results-footer {
-  height: 110px; }
+  height: 90px; }
 
 #webkite-results.sm .webkite-filter-area, #webkite-results.sm .webkite-sort-area, #webkite-results.sm .webkite-sort-area > .webkite-toggle {
   width: 100%; }
